@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_User_Roles</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_User_Roles</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-user.php.xhtml#line948">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_User_Roles</h1>
+        <h4>GeniBase User Roles.</h4>
+        <p>The role option is simple, the structure is organized by role name that store<br/>the name in value of the 'name' key. The capabilities are stored as an array<br/>in the value of the 'capability' key.<br/><br/>array (<br/>'rolename' =&gt; array (<br/>'name' =&gt; 'rolename',<br/>'capabilities' =&gt; array()<br/>)<br/>)</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_User_Roles
+            {<br/><ul class="none"><li>// members</li><li>public  <a href="#members">$roles</a>;
+                    </li><li>public array <a href="#members">$role_objects</a> =
+                        ;
+                    </li><li>public array <a href="#members">$role_names</a> =
+                        ;
+                    </li><li>public  <a href="#members">$role_key</a>;
+                    </li><li>public <span title="bool">bool</span> <a href="#members">$use_db</a> =
+                        true;
+                    </li><li>private static <span title="GB_User_Roles">GB_User_Roles</span> <a href="#members">$_instance</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="GB_User_Roles" href="../classes/GB_User_Roles/__construct.xhtml">__construct</a>()
+                    </li><li>public static GB_User_Roles <a title="GB_User_Roles" href="../classes/GB_User_Roles/getInstance.xhtml">getInstance</a>()
+                    </li><li>protected void <a title="GB_User_Roles" href="../classes/GB_User_Roles/_init.xhtml">_init</a>()
+                    </li><li>public void <a title="GB_User_Roles" href="../classes/GB_User_Roles/reinit.xhtml">reinit</a>()
+                    </li><li>public GB_Role|null <a title="GB_User_Roles" href="../classes/GB_User_Roles/add_role.xhtml">add_role</a>()
+                    </li><li>public void <a title="GB_User_Roles" href="../classes/GB_User_Roles/remove_role.xhtml">remove_role</a>()
+                    </li><li>public void <a title="GB_User_Roles" href="../classes/GB_User_Roles/add_cap.xhtml">add_cap</a>()
+                    </li><li>public void <a title="GB_User_Roles" href="../classes/GB_User_Roles/remove_cap.xhtml">remove_cap</a>()
+                    </li><li>public GB_Role|null <a title="GB_User_Roles" href="../classes/GB_User_Roles/get_role.xhtml">get_role</a>()
+                    </li><li>public array <a title="GB_User_Roles" href="../classes/GB_User_Roles/get_names.xhtml">get_names</a>()
+                    </li><li>public bool <a title="GB_User_Roles" href="../classes/GB_User_Roles/is_role.xhtml">is_role</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_instance"><strong>$_instance</strong>
+                —
+                <a title="GB_User_Roles" href="../classes/GB_User_Roles.xhtml">GB_User_Roles</a><br/><span class="indent">Singular instance of class.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="role_key"><strong>$role_key</strong>
+                —
+                string<br/><span class="indent">Option name for storing role list.</span></li>
+            <li id="role_names"><strong>$role_names</strong>
+                —
+                array<br/><span class="indent">List of role names.</span></li>
+            <li id="role_objects"><strong>$role_objects</strong>
+                —
+                array<br/><span class="indent">List of the role objects.</span></li>
+            <li id="roles"><strong>$roles</strong>
+                —
+                array<br/><span class="indent">List of roles and capabilities.</span></li>
+            <li id="use_db"><strong>$use_db</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether to use the database for retrieval and storage.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_init"><a title="GB_User_Roles" href="../classes/GB_User_Roles/_init.xhtml">_init()</a>
+                — Set up the object properties.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="GB_User_Roles" href="../classes/GB_User_Roles/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="add_cap"><a title="GB_User_Roles" href="../classes/GB_User_Roles/add_cap.xhtml">add_cap()</a>
+                — Add capability to role.</li>
+            <li id="add_role"><a title="GB_User_Roles" href="../classes/GB_User_Roles/add_role.xhtml">add_role()</a>
+                — Add role name with capabilities to list.</li>
+            <li id="getInstance"><a title="GB_User_Roles" href="../classes/GB_User_Roles/getInstance.xhtml">getInstance()</a>
+                — Get singular instance of class.</li>
+            <li id="get_names"><a title="GB_User_Roles" href="../classes/GB_User_Roles/get_names.xhtml">get_names()</a>
+                — Retrieve list of role names.</li>
+            <li id="get_role"><a title="GB_User_Roles" href="../classes/GB_User_Roles/get_role.xhtml">get_role()</a>
+                — Retrieve role object by name.</li>
+            <li id="is_role"><a title="GB_User_Roles" href="../classes/GB_User_Roles/is_role.xhtml">is_role()</a>
+                — Whether role name is currently in the list of available roles.</li>
+            <li id="reinit"><a title="GB_User_Roles" href="../classes/GB_User_Roles/reinit.xhtml">reinit()</a>
+                — Reinitialize the object</li>
+            <li id="remove_cap"><a title="GB_User_Roles" href="../classes/GB_User_Roles/remove_cap.xhtml">remove_cap()</a>
+                — Remove capability from role.</li>
+            <li id="remove_role"><a title="GB_User_Roles" href="../classes/GB_User_Roles/remove_role.xhtml">remove_role()</a>
+                — Remove role by name.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

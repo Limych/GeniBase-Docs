@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_DBase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_DBase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-dbase.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_DBase</h1>
+        <h4>Класс работы с базой данных</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_DBase
+            {<br/><ul class="none"><li>// constants</li><li>const MODE_INSERT = 'INSERT';</li><li>const MODE_IGNORE = 'IGNORE';</li><li>const MODE_REPLACE = 'REPLACE';</li><li>const MODE_UPDATE = 'UPDATE';</li><li>const MODE_DUPLICATE = 'DUPLICATE';</li></ul><ul class="none"><li>// members</li><li>protected <span title="MySQLi">MySQLi</span> <a href="#members">$db</a>;
+                    </li><li>protected  <a href="#members">$host</a>;
+                    </li><li>public <span title="null|string|GB_Error">null|string|GB_Error</span> <a href="#members">$error</a>;
+                    </li><li>public integer <a href="#members">$num_queries</a> =
+                        0;
+                    </li><li>public <span title="bool">bool</span> <a href="#members">$show_errors</a> =
+                        false;
+                    </li><li>public <span title="bool">bool</span> <a href="#members">$suppress_errors</a> =
+                        false;
+                    </li><li>public  <a href="#members">$queries</a>;
+                    </li><li>public  <a href="#members">$last_query</a>;
+                    </li><li>public string <a href="#members">$last_error</a> =
+                        '';
+                    </li><li>public integer <a href="#members">$rows_affected</a> =
+                        0;
+                    </li><li>public integer <a href="#members">$insert_id</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="GB_DBase" href="../classes/GB_DBase/__construct.xhtml">__construct</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/__destruct.xhtml">__destruct</a>()
+                    </li><li>public static string <a title="GB_DBase" href="../classes/GB_DBase/make_regex.xhtml">make_regex</a>()
+                    </li><li>public static string <a title="GB_DBase" href="../classes/GB_DBase/make_condition.xhtml">make_condition</a>()
+                    </li><li>public false|void <a title="GB_DBase" href="../classes/GB_DBase/bail.xhtml">bail</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/connect.xhtml">connect</a>()
+                    </li><li>public null|string <a title="GB_DBase" href="../classes/GB_DBase/db_version.xhtml">db_version</a>()
+                    </li><li>public GB_Error <a title="GB_DBase" href="../classes/GB_DBase/check_database_version.xhtml">check_database_version</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/has_cap.xhtml">has_cap</a>()
+                    </li><li>public string|array <a title="GB_DBase" href="../classes/GB_DBase/table_escape.xhtml">table_escape</a>()
+                    </li><li>public string <a title="GB_DBase" href="../classes/GB_DBase/table_unescape.xhtml">table_unescape</a>()
+                    </li><li>public string|array <a title="GB_DBase" href="../classes/GB_DBase/field_escape.xhtml">field_escape</a>()
+                    </li><li>public string|array <a title="GB_DBase" href="../classes/GB_DBase/field_unescape.xhtml">field_unescape</a>()
+                    </li><li>public mixed <a title="GB_DBase" href="../classes/GB_DBase/data_escape.xhtml">data_escape</a>()
+                    </li><li>public mixed <a title="GB_DBase" href="../classes/GB_DBase/like_escape.xhtml">like_escape</a>()
+                    </li><li>public string <a title="GB_DBase" href="../classes/GB_DBase/prepare_query.xhtml">prepare_query</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/show_errors.xhtml">show_errors</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/hide_errors.xhtml">hide_errors</a>()
+                    </li><li>public bool <a title="GB_DBase" href="../classes/GB_DBase/suppress_errors.xhtml">suppress_errors</a>()
+                    </li><li>public string <a title="GB_DBase" href="../classes/GB_DBase/get_caller.xhtml">get_caller</a>()
+                    </li><li>public void <a title="GB_DBase" href="../classes/GB_DBase/print_error.xhtml">print_error</a>()
+                    </li><li>public void <a title="GB_DBase" href="../classes/GB_DBase/flush.xhtml">flush</a>()
+                    </li><li>public mixed <a title="GB_DBase" href="../classes/GB_DBase/query.xhtml">query</a>()
+                    </li><li>public array|bool <a title="GB_DBase" href="../classes/GB_DBase/get_column.xhtml">get_column</a>()
+                    </li><li>public bool|mixed <a title="GB_DBase" href="../classes/GB_DBase/get_cell.xhtml">get_cell</a>()
+                    </li><li>public array|bool <a title="GB_DBase" href="../classes/GB_DBase/get_table.xhtml">get_table</a>()
+                    </li><li>public array|bool <a title="GB_DBase" href="../classes/GB_DBase/get_row.xhtml">get_row</a>()
+                    </li><li>public number|bool <a title="GB_DBase" href="../classes/GB_DBase/set_row.xhtml">set_row</a>()
+                    </li><li>public string <a title="GB_DBase" href="../classes/GB_DBase/_set_row_insert.xhtml">_set_row_insert</a>()
+                    </li><li>public string <a title="GB_DBase" href="../classes/GB_DBase/_set_row_update.xhtml">_set_row_update</a>()
+                    </li><li>public integer|boolean <a title="GB_DBase" href="../classes/GB_DBase/delete.xhtml">delete</a>()
+                    </li><li>public array <a title="GB_DBase" href="../classes/GB_DBase/split_queries.xhtml">split_queries</a>()
+                    </li><li>public void <a title="GB_DBase" href="../classes/GB_DBase/remove_comments.xhtml">remove_comments</a>()
+                    </li><li>public array <a title="GB_DBase" href="../classes/GB_DBase/create_table_patch.xhtml">create_table_patch</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">32</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $db. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">183</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $ch. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">541</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$value'.</td>
+            </tr>
+            <tr>
+              <td class="line">714 - 767</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method query() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">714 - 767</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method query() has an NPath complexity of 324. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">1006 - 1080</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method _set_row_update() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1160 - 1327</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method create_table_patch() has a Cyclomatic Complexity of 31. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1160 - 1327</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method create_table_patch() has an NPath complexity of 680064. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">1160 - 1327</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method create_table_patch() has 168 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="MODE_INSERT">MODE_INSERT</td>
+              <td>'INSERT'</td>
+            </tr>
+            <tr>
+              <td id="MODE_IGNORE">MODE_IGNORE</td>
+              <td>'IGNORE'</td>
+            </tr>
+            <tr>
+              <td id="MODE_REPLACE">MODE_REPLACE</td>
+              <td>'REPLACE'</td>
+            </tr>
+            <tr>
+              <td id="MODE_UPDATE">MODE_UPDATE</td>
+              <td>'UPDATE'</td>
+            </tr>
+            <tr>
+              <td id="MODE_DUPLICATE">MODE_DUPLICATE</td>
+              <td>'DUPLICATE'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="MySQLi" href="../classes/MySQLi.xhtml">MySQLi</a></li>
+            <li id="host">
+              <strong>$host</strong>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="error"><strong>$error</strong>
+                —
+                <a title="null|string|GB_Error" href="../classes/null|string|GB_Error.xhtml">null|string|GB_Error</a><br/><span class="indent">The last error.</span></li>
+            <li id="insert_id"><strong>$insert_id</strong>
+                —
+                int<br/><span class="indent">The ID generated for an AUTO_INCREMENT column by the previous query (usually INSERT).</span></li>
+            <li id="last_error"><strong>$last_error</strong>
+                —
+                string<br/><span class="indent">The last error during query.</span></li>
+            <li id="last_query"><strong>$last_query</strong>
+                —
+                array<br/><span class="indent">Last query made.</span></li>
+            <li id="num_queries"><strong>$num_queries</strong>
+                —
+                int<br/><span class="indent">Amount of queries made</span></li>
+            <li id="queries"><strong>$queries</strong>
+                —
+                array<br/><span class="indent">Saved queries that were executed.</span></li>
+            <li id="rows_affected"><strong>$rows_affected</strong>
+                —
+                int<br/><span class="indent">Count of affected rows by previous query</span></li>
+            <li id="show_errors"><strong>$show_errors</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether to show SQL/DB errors.</span></li>
+            <li id="suppress_errors"><strong>$suppress_errors</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether to suppress errors during the DB bootstrapping.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="GB_DBase" href="../classes/GB_DBase/__construct.xhtml">__construct()</a>
+                — Создание экземпляра класса.</li>
+            <li id="__destruct"><a title="GB_DBase" href="../classes/GB_DBase/__destruct.xhtml">__destruct()</a>
+                — Уничтожаем экземпляр класса.</li>
+            <li id="_set_row_insert"><a title="GB_DBase" href="../classes/GB_DBase/_set_row_insert.xhtml">_set_row_insert()</a>
+                — Making query for inserting new data.</li>
+            <li id="_set_row_update"><a title="GB_DBase" href="../classes/GB_DBase/_set_row_update.xhtml">_set_row_update()</a>
+                — Making query for updating data</li>
+            <li id="bail"><a title="GB_DBase" href="../classes/GB_DBase/bail.xhtml">bail()</a>
+                — Wraps errors in a nice header and footer and dies.</li>
+            <li id="check_database_version"><a title="GB_DBase" href="../classes/GB_DBase/check_database_version.xhtml">check_database_version()</a>
+                — Whether MySQL database is at least the required minimum version.</li>
+            <li id="connect"><a title="GB_DBase" href="../classes/GB_DBase/connect.xhtml">connect()</a>
+                — Connect to and select database.</li>
+            <li id="create_table_patch"><a title="GB_DBase" href="../classes/GB_DBase/create_table_patch.xhtml">create_table_patch()</a>
+                — {@internal Missing Short Description}}</li>
+            <li id="data_escape"><a title="GB_DBase" href="../classes/GB_DBase/data_escape.xhtml">data_escape()</a>
+                — Экранирование значения переменной, учитывая его тип.</li>
+            <li id="db_version"><a title="GB_DBase" href="../classes/GB_DBase/db_version.xhtml">db_version()</a>
+                — The database version number.</li>
+            <li id="delete"><a title="GB_DBase" href="../classes/GB_DBase/delete.xhtml">delete()</a>
+                — Delete records from table.</li>
+            <li id="field_escape"><a title="GB_DBase" href="../classes/GB_DBase/field_escape.xhtml">field_escape()</a>
+                — Экранирование имя поля.</li>
+            <li id="field_unescape"><a title="GB_DBase" href="../classes/GB_DBase/field_unescape.xhtml">field_unescape()</a>
+                — Unescape fields names.</li>
+            <li id="flush"><a title="GB_DBase" href="../classes/GB_DBase/flush.xhtml">flush()</a>
+                — Kill cached query results.</li>
+            <li id="get_caller"><a title="GB_DBase" href="../classes/GB_DBase/get_caller.xhtml">get_caller()</a>
+                — Retrieve the name of the function that called this class.</li>
+            <li id="get_cell"><a title="GB_DBase" href="../classes/GB_DBase/get_cell.xhtml">get_cell()</a>
+                — Получения результата скалярного запроса (состоящего из одной строки и одной ячейки в ней).</li>
+            <li id="get_column"><a title="GB_DBase" href="../classes/GB_DBase/get_column.xhtml">get_column()</a>
+                — Получение результата запроса, который состоит из нескольких строк и одного столбца.</li>
+            <li id="get_row"><a title="GB_DBase" href="../classes/GB_DBase/get_row.xhtml">get_row()</a>
+                — Получение результата запроса, который состоит из одной строки.</li>
+            <li id="get_table"><a title="GB_DBase" href="../classes/GB_DBase/get_table.xhtml">get_table()</a>
+                — Получение результата табличного запроса (состоящего из нескольких строк и нескольких столбцов).</li>
+            <li id="has_cap"><a title="GB_DBase" href="../classes/GB_DBase/has_cap.xhtml">has_cap()</a>
+                — Determine if a database supports a particular feature.</li>
+            <li id="hide_errors"><a title="GB_DBase" href="../classes/GB_DBase/hide_errors.xhtml">hide_errors()</a>
+                — Disables showing of database errors.</li>
+            <li id="like_escape"><a title="GB_DBase" href="../classes/GB_DBase/like_escape.xhtml">like_escape()</a>
+                — Экранирование значения переменной для оператора LIKE.</li>
+            <li id="make_condition"><a title="GB_DBase" href="../classes/GB_DBase/make_condition.xhtml">make_condition()</a>
+                — Формирование из строки с метасимволами условного выражения для поиска через оператор LIKE.</li>
+            <li id="make_regex"><a title="GB_DBase" href="../classes/GB_DBase/make_regex.xhtml">make_regex()</a>
+                — Формирование из строки с метасимволами регулярного выражения для поиска через оператор RLIKE.</li>
+            <li id="prepare_query"><a title="GB_DBase" href="../classes/GB_DBase/prepare_query.xhtml">prepare_query()</a>
+                — Подготовка SQL-запроса к исполнению.</li>
+            <li id="print_error"><a title="GB_DBase" href="../classes/GB_DBase/print_error.xhtml">print_error()</a>
+                — Print SQL/DB error.</li>
+            <li id="query"><a title="GB_DBase" href="../classes/GB_DBase/query.xhtml">query()</a>
+                — Отправка запроса в MySQL и слежение за ошибками.</li>
+            <li id="remove_comments">
+              <a title="GB_DBase" href="../classes/GB_DBase/remove_comments.xhtml">remove_comments()</a>
+            </li>
+            <li id="set_row"><a title="GB_DBase" href="../classes/GB_DBase/set_row.xhtml">set_row()</a>
+                — Вставка в таблицу новых данных или обновление существующих.</li>
+            <li id="show_errors"><a title="GB_DBase" href="../classes/GB_DBase/show_errors.xhtml">show_errors()</a>
+                — Enables showing of database errors.</li>
+            <li id="split_queries"><a title="GB_DBase" href="../classes/GB_DBase/split_queries.xhtml">split_queries()</a>
+                — Separate individual queries into an array.</li>
+            <li id="suppress_errors"><a title="GB_DBase" href="../classes/GB_DBase/suppress_errors.xhtml">suppress_errors()</a>
+                — Whether to suppress database errors.</li>
+            <li id="table_escape"><a title="GB_DBase" href="../classes/GB_DBase/table_escape.xhtml">table_escape()</a>
+                — Добавление префикса к имени таблицы.</li>
+            <li id="table_unescape"><a title="GB_DBase" href="../classes/GB_DBase/table_unescape.xhtml">table_unescape()</a>
+                — Unescape table name.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-01T19:55:20+00:00 (commit #<span title="0f7e258d4c6cf88358e823e564787ba67459392a">0f7e258</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#25:
+
+Механизм хранения опций системы
+https://github.com/Limych/GeniBase/issues/issue/25</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-26T21:20:33+00:00 (commit #<span title="fa63be86d83896880ae64584a3b26a0a04d687c4">fa63be8</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">To all files added checking that class GB_Hooks are exists.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-25T21:34:13+00:00 (commit #<span title="4a7821b267b42de13f945f5f1eab3a59dce64bb9">4a7821b</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Hooks API incapsulated to static class.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-23T11:15:12+00:00 (commit #<span title="a0eff4514f29d562573b242521ecae4cd47d8053">a0eff45</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">New pagination function. And fixed error of cron usage.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:34:17+00:00 (commit #<span title="28c49e6a70fcdc5aa6a9ebeadc4f3767bc13b505">28c49e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T17:00:10+00:00 (commit #<span title="4176d2ef4a62f7f90e95df2c00192f10a096d6b5">4176d2e</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#20:
+
+Перевод всего встроенного в систему текста на gettext. Английская и
+русская локализации системы
+https://github.com/Limych/GeniBase/issues/issue/20</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-13T19:41:13+00:00 (commit #<span title="839eee57fbf4855db14661b752ce955fa73e0065">839eee5</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Setting user ID cookie and some minor code changes.
+
+#50</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added URLs control functions.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T21:28:29+00:00 (commit #<span title="68c7d2a066cabd9986a161bee3aed92adabf743b">68c7d2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Modified sorting of fused search results.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:37:49+00:00 (commit #<span title="ccc9d214a378ce12974974f1f9b4202fcc03ea05">ccc9d21</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:04:10+00:00 (commit #<span title="8642b90d9ac0863d3bf302aab723aa06e1cb957a">8642b90</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

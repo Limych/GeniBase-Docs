@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - GB_Hooks::add_filter</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="GB_Hooks" href="../../classes/GB_Hooks.xhtml">GB_Hooks</a>
+          </li>
+          <li class="separator">add_filter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/gb/class.gb-hooks.php.xhtml#line206">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>GB_Hooks::</small>add_filter</h1>
+        <h4>Hook a function or method to a specific filter action.</h4>
+        <p>GeniBase offers filter hooks to allow plugins to modify
+various types of internal data at runtime.
+
+A plugin can modify data by binding a callback to a filter hook. When the filter
+is later applied, each bound callback is run in order of priority, and given
+the opportunity to modify a value by returning a new value.
+
+The following example shows how a callback function is bound to a filter hook.
+
+Note that `$example` is passed to the callback, (maybe) modified, then returned:
+
+function example_callback( $example ) {
+// Maybe modify $example in some way.
+return $example;
+}
+GB_Hooks::$add_filter( 'example_filter', 'example_callback' );
+
+Since GeniBase 1.5.1, bound callbacks can take as many arguments as are
+passed as parameters in the corresponding GB_Hooks::$apply_filters() call.
+The `$accepted_args` parameter allows for calling functions only when the number
+of args match.
+
+*Note:* the function will return true whether or not the callback is valid.
+It is up to you to take care. This is done for optimization purposes,
+so everything is as quick as possible.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function add_filter(string
+        $tag,
+            <a title="callback" href="../../classes/callback.xhtml">callback</a>
+        $function_to_add,
+            [integer
+        $priority = 10,
+            [integer
+        $accepted_args = 1]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$tag</code>
+                —
+                string</dt>
+          <dd><br/>The name of the filter to hook the $function_to_add callback to.</dd>
+          <dt><code>$function_to_add</code>
+                —
+                object</dt>
+          <dd><br/>The callback to be run when the filter is applied.</dd>
+          <dt><code>$priority</code>
+                —
+                integer</dt>
+          <dd><br/>Optional. Used to specify the order in which the functions<br/>associated with a particular action are executed. Default 10.<br/>Lower numbers correspond with earlier execution,<br/>and functions with the same priority are executed<br/>           in the order in which they were added to the action.</dd>
+          <dt><code>$accepted_args</code>
+                —
+                integer</dt>
+          <dd><br/>Optional. The number of arguments the function accepts. Default 1.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>boolean</dt>
+          <dd>true</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

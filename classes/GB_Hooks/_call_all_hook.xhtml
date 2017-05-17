@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - GB_Hooks::_call_all_hook</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="GB_Hooks" href="../../classes/GB_Hooks.xhtml">GB_Hooks</a>
+          </li>
+          <li class="separator">_call_all_hook</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="../../source/gb/class.gb-hooks.php.xhtml#line75">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>GB_Hooks::</small>_call_all_hook</h1>
+        <h4>Call the 'all' hook, which will process the functions hooked into it.</h4>
+        <p>The 'all' hook passes all of the arguments or parameters that were used for
+the hook, which this function was called for.
+
+This function is used internally for GB_Hooks::apply_filters(), GB_Hooks::do_action(), and
+GB_Hooks::do_action_ref_array() and is not meant to be used from outside those
+functions. This function does not check for the existence of the all hook, so
+it will fail unless the all hook exists prior to this function call.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function _call_all_hook(array
+        $args )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$args</code>
+                —
+                array</dt>
+          <dd><br/>The collected parameters from the hook that was called.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

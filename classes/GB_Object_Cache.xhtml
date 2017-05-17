@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Object_Cache</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Object_Cache</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-object-cache.php.xhtml#line29">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Object_Cache</h1>
+        <h4>GeniBase Object Cache</h4>
+        <p>The GeniBase Object Cache is used to save on trips to the database. The<br/>Object Cache stores all of the cache data to memory and makes the cache<br/>contents available by using a key, which is used to name and later retrieve<br/>the cache contents.<br/><br/>The Object Cache can be replaced by other caching mechanisms by placing files<br/>in the gb-content folder. If that file exists, then this file will not be<br/>included.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Object_Cache
+            {<br/><ul class="none"><li>// members</li><li>private static array <a href="#members">$cache</a> =
+                        ;
+                    </li><li>private static integer <a href="#members">$cache_hits</a> =
+                        0;
+                    </li><li>public static integer <a href="#members">$cache_misses</a> =
+                        0;
+                    </li><li>private static array <a href="#members">$global_groups</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/add.xhtml">add</a>()
+                    </li><li>public static void <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/add_global_groups.xhtml">add_global_groups</a>()
+                    </li><li>public static false|int <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/decr.xhtml">decr</a>()
+                    </li><li>public static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/delete.xhtml">delete</a>()
+                    </li><li>public static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/flush.xhtml">flush</a>()
+                    </li><li>public static bool|mixed <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/get.xhtml">get</a>()
+                    </li><li>public static false|int <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/incr.xhtml">incr</a>()
+                    </li><li>public static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/replace.xhtml">replace</a>()
+                    </li><li>public static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/set.xhtml">set</a>()
+                    </li><li>public static void <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/stats.xhtml">stats</a>()
+                    </li><li>protected static bool <a title="GB_Object_Cache" href="../classes/GB_Object_Cache/_exists.xhtml">_exists</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">167</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$deprecated'.</td>
+            </tr>
+            <tr>
+              <td class="line">213</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$force'.</td>
+            </tr>
+            <tr>
+              <td class="line">317</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$expire'.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="cache"><strong>$cache</strong>
+                —
+                array<br/><span class="indent">Holds the cached objects</span></li>
+            <li id="cache_hits"><strong>$cache_hits</strong>
+                —
+                int<br/><span class="indent">The amount of times the cache data was already stored in the cache.</span></li>
+            <li id="global_groups"><strong>$global_groups</strong>
+                —
+                array<br/><span class="indent">List of global groups</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="cache_misses"><strong>$cache_misses</strong>
+                —
+                int<br/><span class="indent">Amount of times the cache did not have the request in cache</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_exists"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/_exists.xhtml">_exists()</a>
+                — Utility function to determine whether a key exists in the cache.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="add"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/add.xhtml">add()</a>
+                — Adds data to the cache if it doesn't already exist.</li>
+            <li id="add_global_groups"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/add_global_groups.xhtml">add_global_groups()</a>
+                — Sets the list of global groups.</li>
+            <li id="decr"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/decr.xhtml">decr()</a>
+                — Decrement numeric cache item's value</li>
+            <li id="delete"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/delete.xhtml">delete()</a>
+                — Remove the contents of the cache key in the group</li>
+            <li id="flush"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/flush.xhtml">flush()</a>
+                — Clears the object cache of all data</li>
+            <li id="get"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/get.xhtml">get()</a>
+                — Retrieves the cache contents, if it exists</li>
+            <li id="incr"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/incr.xhtml">incr()</a>
+                — Increment numeric cache item's value</li>
+            <li id="replace"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/replace.xhtml">replace()</a>
+                — Replace the contents in the cache, if contents already exist</li>
+            <li id="set"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/set.xhtml">set()</a>
+                — Sets the data contents into the cache</li>
+            <li id="stats"><a title="GB_Object_Cache" href="../classes/GB_Object_Cache/stats.xhtml">stats()</a>
+                — Echoes the stats of the caching.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-29T13:30:08+00:00 (commit #<span title="363a6b3cd8980c0b4a8a0cc50a70423fe92c366e">363a6b3</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#75:
+
+Система внутреннего кэширования объектов (для целей ускорения)
+https://github.com/Limych/GeniBase/issues/issue/75</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

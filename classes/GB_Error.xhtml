@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Error</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Error</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-error.php.xhtml#line25">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Error</h1>
+        <h4>GeniBase Error class.</h4>
+        <p>Container for checking for GeniBase errors and error messages. Return<br/>GB_Error and use to check if this class is returned.<br/>Many core GeniBase functions pass this class in the event of an error and<br/>if not handled properly will result in code errors.<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Error
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$errors</a> =
+                        ;
+                    </li><li>private array <a href="#members">$error_data</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public GB_Error <a title="GB_Error" href="../classes/GB_Error/__construct.xhtml">__construct</a>()
+                    </li><li>public array <a title="GB_Error" href="../classes/GB_Error/get_error_codes.xhtml">get_error_codes</a>()
+                    </li><li>public string|int <a title="GB_Error" href="../classes/GB_Error/get_error_code.xhtml">get_error_code</a>()
+                    </li><li>public array <a title="GB_Error" href="../classes/GB_Error/get_error_messages.xhtml">get_error_messages</a>()
+                    </li><li>public string <a title="GB_Error" href="../classes/GB_Error/get_error_message.xhtml">get_error_message</a>()
+                    </li><li>public mixed <a title="GB_Error" href="../classes/GB_Error/get_error_data.xhtml">get_error_data</a>()
+                    </li><li>public void <a title="GB_Error" href="../classes/GB_Error/add.xhtml">add</a>()
+                    </li><li>public void <a title="GB_Error" href="../classes/GB_Error/add_data.xhtml">add_data</a>()
+                    </li><li>public void <a title="GB_Error" href="../classes/GB_Error/remove.xhtml">remove</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="error_data"><strong>$error_data</strong>
+                —
+                array<br/><span class="indent">Stores the list of data for error codes.</span></li>
+            <li id="errors"><strong>$errors</strong>
+                —
+                array<br/><span class="indent">Stores the list of errors.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="GB_Error" href="../classes/GB_Error/__construct.xhtml">__construct()</a>
+                — Initialize the error.</li>
+            <li id="add"><a title="GB_Error" href="../classes/GB_Error/add.xhtml">add()</a>
+                — Add an error or append additional message to an existing error.</li>
+            <li id="add_data"><a title="GB_Error" href="../classes/GB_Error/add_data.xhtml">add_data()</a>
+                — Add data for error code.</li>
+            <li id="get_error_code"><a title="GB_Error" href="../classes/GB_Error/get_error_code.xhtml">get_error_code()</a>
+                — Retrieve first error code available.</li>
+            <li id="get_error_codes"><a title="GB_Error" href="../classes/GB_Error/get_error_codes.xhtml">get_error_codes()</a>
+                — Retrieve all error codes.</li>
+            <li id="get_error_data"><a title="GB_Error" href="../classes/GB_Error/get_error_data.xhtml">get_error_data()</a>
+                — Retrieve error data for error code.</li>
+            <li id="get_error_message"><a title="GB_Error" href="../classes/GB_Error/get_error_message.xhtml">get_error_message()</a>
+                — Get single error message.</li>
+            <li id="get_error_messages"><a title="GB_Error" href="../classes/GB_Error/get_error_messages.xhtml">get_error_messages()</a>
+                — Retrieve all error messages or error messages matching code.</li>
+            <li id="remove"><a title="GB_Error" href="../classes/GB_Error/remove.xhtml">remove()</a>
+                — Removes the specified error.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:04:24+00:00 (commit #<span title="3647280e9b100b46d41a8fd9c809818a83f4143c">3647280</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#59:
+
+Централизованная обработка ошибок
+https://github.com/Limych/GeniBase/issues/issue/59</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

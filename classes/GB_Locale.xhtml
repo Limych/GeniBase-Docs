@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Locale</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Locale</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/locale.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Locale</h1>
+        <h4>Class that loads the calendar locale.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Locale
+            {<br/><ul class="none"><li>// members</li><li>public  <a href="#members">$weekday</a>;
+                    </li><li>public  <a href="#members">$weekday_initial</a>;
+                    </li><li>public  <a href="#members">$weekday_abbrev</a>;
+                    </li><li>public  <a href="#members">$month</a>;
+                    </li><li>public  <a href="#members">$month_abbrev</a>;
+                    </li><li>public  <a href="#members">$meridiem</a>;
+                    </li><li>public string <a href="#members">$text_direction</a> =
+                        'ltr';
+                    </li><li>public  <a href="#members">$number_format</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="GB_Locale" href="../classes/GB_Locale/init.xhtml">init</a>()
+                    </li><li>public void <a title="GB_Locale" href="../classes/GB_Locale/rtl_src_admin_notice.xhtml">rtl_src_admin_notice</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_weekday.xhtml">get_weekday</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_weekday_initial.xhtml">get_weekday_initial</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_weekday_abbrev.xhtml">get_weekday_abbrev</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_month.xhtml">get_month</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_month_abbrev.xhtml">get_month_abbrev</a>()
+                    </li><li>public string <a title="GB_Locale" href="../classes/GB_Locale/get_meridiem.xhtml">get_meridiem</a>()
+                    </li><li>public void <a title="GB_Locale" href="../classes/GB_Locale/register_globals.xhtml">register_globals</a>()
+                    </li><li>public GB_Locale <a title="GB_Locale" href="../classes/GB_Locale/__construct.xhtml">__construct</a>()
+                    </li><li>public bool <a title="GB_Locale" href="../classes/GB_Locale/is_rtl.xhtml">is_rtl</a>()
+                    </li><li>public void <a title="GB_Locale" href="../classes/GB_Locale/_strings_for_pot.xhtml">_strings_for_pot</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="meridiem"><strong>$meridiem</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for 'am' and 'pm'.</span></li>
+            <li id="month"><strong>$month</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for the full month names.</span></li>
+            <li id="month_abbrev"><strong>$month_abbrev</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for the abbreviated month names.</span></li>
+            <li id="number_format"><strong>$number_format</strong>
+                —
+                array</li>
+            <li id="text_direction"><strong>$text_direction</strong>
+                —
+                string<br/><span class="indent">The text direction of the locale language.</span></li>
+            <li id="weekday"><strong>$weekday</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for the full weekday names.</span></li>
+            <li id="weekday_abbrev"><strong>$weekday_abbrev</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for the abbreviated weekday names.</span></li>
+            <li id="weekday_initial"><strong>$weekday_initial</strong>
+                —
+                array<br/><span class="indent">Stores the translated strings for the one character weekday names.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="GB_Locale" href="../classes/GB_Locale/__construct.xhtml">__construct()</a>
+                — Constructor which calls helper methods to set up object variables</li>
+            <li id="_strings_for_pot"><a title="GB_Locale" href="../classes/GB_Locale/_strings_for_pot.xhtml">_strings_for_pot()</a>
+                — Register date/time format strings for general POT.</li>
+            <li id="get_meridiem"><a title="GB_Locale" href="../classes/GB_Locale/get_meridiem.xhtml">get_meridiem()</a>
+                — Retrieve translated version of meridiem string.</li>
+            <li id="get_month"><a title="GB_Locale" href="../classes/GB_Locale/get_month.xhtml">get_month()</a>
+                — Retrieve the full translated month by month number.</li>
+            <li id="get_month_abbrev"><a title="GB_Locale" href="../classes/GB_Locale/get_month_abbrev.xhtml">get_month_abbrev()</a>
+                — Retrieve translated version of month abbreviation string.</li>
+            <li id="get_weekday"><a title="GB_Locale" href="../classes/GB_Locale/get_weekday.xhtml">get_weekday()</a>
+                — Retrieve the full translated weekday word.</li>
+            <li id="get_weekday_abbrev"><a title="GB_Locale" href="../classes/GB_Locale/get_weekday_abbrev.xhtml">get_weekday_abbrev()</a>
+                — Retrieve the translated weekday abbreviation.</li>
+            <li id="get_weekday_initial"><a title="GB_Locale" href="../classes/GB_Locale/get_weekday_initial.xhtml">get_weekday_initial()</a>
+                — Retrieve the translated weekday initial.</li>
+            <li id="init"><a title="GB_Locale" href="../classes/GB_Locale/init.xhtml">init()</a>
+                — Sets up the translated strings and object properties.</li>
+            <li id="is_rtl"><a title="GB_Locale" href="../classes/GB_Locale/is_rtl.xhtml">is_rtl()</a>
+                — Checks if current locale is RTL.</li>
+            <li id="register_globals"><a title="GB_Locale" href="../classes/GB_Locale/register_globals.xhtml">register_globals()</a>
+                — Global variables are deprecated.</li>
+            <li id="rtl_src_admin_notice">
+              <a title="GB_Locale" href="../classes/GB_Locale/rtl_src_admin_notice.xhtml">rtl_src_admin_notice()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-26T21:20:33+00:00 (commit #<span title="fa63be86d83896880ae64584a3b26a0a04d687c4">fa63be8</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">To all files added checking that class GB_Hooks are exists.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-25T21:34:13+00:00 (commit #<span title="4a7821b267b42de13f945f5f1eab3a59dce64bb9">4a7821b</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Hooks API incapsulated to static class.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:34:17+00:00 (commit #<span title="28c49e6a70fcdc5aa6a9ebeadc4f3767bc13b505">28c49e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-13T19:41:13+00:00 (commit #<span title="839eee57fbf4855db14661b752ce955fa73e0065">839eee5</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Setting user ID cookie and some minor code changes.
+
+#50</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added URLs control functions.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:37:49+00:00 (commit #<span title="ccc9d214a378ce12974974f1f9b4202fcc03ea05">ccc9d21</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:04:10+00:00 (commit #<span title="8642b90d9ac0863d3bf302aab723aa06e1cb957a">8642b90</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

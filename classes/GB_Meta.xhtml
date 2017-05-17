@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Meta</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Meta</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-meta.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Meta</h1>
+        <h4>Class for manipulating metadata of various GeniBase object types.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Meta
+            {<br/><ul class="none"><li>// methods</li><li>public static mixed <a title="GB_Meta" href="../classes/GB_Meta/_get_table.xhtml">_get_table</a>()
+                    </li><li>public static mixed <a title="GB_Meta" href="../classes/GB_Meta/_sanitize.xhtml">_sanitize</a>()
+                    </li><li>public static int|bool <a title="GB_Meta" href="../classes/GB_Meta/add.xhtml">add</a>()
+                    </li><li>public static string|array <a title="GB_Meta" href="../classes/GB_Meta/get.xhtml">get</a>()
+                    </li><li>public static int|bool <a title="GB_Meta" href="../classes/GB_Meta/update.xhtml">update</a>()
+                    </li><li>public static bool <a title="GB_Meta" href="../classes/GB_Meta/delete.xhtml">delete</a>()
+                    </li><li>public static boolean <a title="GB_Meta" href="../classes/GB_Meta/exists.xhtml">exists</a>()
+                    </li><li>public static  <a title="GB_Meta" href="../classes/GB_Meta/get_by_mid.xhtml">get_by_mid</a>()
+                    </li><li>public static bool <a title="GB_Meta" href="../classes/GB_Meta/update_by_mid.xhtml">update_by_mid</a>()
+                    </li><li>public static bool <a title="GB_Meta" href="../classes/GB_Meta/delete_by_mid.xhtml">delete_by_mid</a>()
+                    </li><li>public static mixed <a title="GB_Meta" href="../classes/GB_Meta/update_cache.xhtml">update_cache</a>()
+                    </li><li>public static bool <a title="GB_Meta" href="../classes/GB_Meta/is_protected.xhtml">is_protected</a>()
+                    </li><li>public static void <a title="GB_Meta" href="../classes/GB_Meta/register.xhtml">register</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">99 - 212</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method add() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">99 - 212</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method add() has 114 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">231 - 294</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method get() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">231 - 294</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method get() has an NPath complexity of 576. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">316 - 446</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method update() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">316 - 446</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method update() has an NPath complexity of 4096. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">316 - 446</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method update() has 131 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method delete() has a Cyclomatic Complexity of 16. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method delete() has an NPath complexity of 5760. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method delete() has 125 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">836 - 901</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method update_cache() has a Cyclomatic Complexity of 16. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">836 - 901</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method update_cache() has an NPath complexity of 2376. The configured NPath complexity threshold is 200.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">101</td>
+            <td>Remove this?</td>
+          </tr>
+        </table>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="_get_table"><a title="GB_Meta" href="../classes/GB_Meta/_get_table.xhtml">_get_table()</a>
+                — Retrieve the name of the metadata table for the specified object type.</li>
+            <li id="_sanitize"><a title="GB_Meta" href="../classes/GB_Meta/_sanitize.xhtml">_sanitize()</a>
+                — Sanitize meta value.</li>
+            <li id="add"><a title="GB_Meta" href="../classes/GB_Meta/add.xhtml">add()</a>
+                — Add metadata for the specified object.</li>
+            <li id="delete"><a title="GB_Meta" href="../classes/GB_Meta/delete.xhtml">delete()</a>
+                — Delete metadata for the specified object.</li>
+            <li id="delete_by_mid"><a title="GB_Meta" href="../classes/GB_Meta/delete_by_mid.xhtml">delete_by_mid()</a>
+                — Delete meta data by meta ID</li>
+            <li id="exists"><a title="GB_Meta" href="../classes/GB_Meta/exists.xhtml">exists()</a>
+                — Determine if a meta key is set for a given object</li>
+            <li id="get"><a title="GB_Meta" href="../classes/GB_Meta/get.xhtml">get()</a>
+                — Retrieve metadata for the specified object.</li>
+            <li id="get_by_mid"><a title="GB_Meta" href="../classes/GB_Meta/get_by_mid.xhtml">get_by_mid()</a>
+                — Get meta data by meta ID</li>
+            <li id="is_protected"><a title="GB_Meta" href="../classes/GB_Meta/is_protected.xhtml">is_protected()</a>
+                — Determine whether a meta key is protected.</li>
+            <li id="register"><a title="GB_Meta" href="../classes/GB_Meta/register.xhtml">register()</a>
+                — Register meta key</li>
+            <li id="update"><a title="GB_Meta" href="../classes/GB_Meta/update.xhtml">update()</a>
+                — Update metadata for the specified object.</li>
+            <li id="update_by_mid"><a title="GB_Meta" href="../classes/GB_Meta/update_by_mid.xhtml">update_by_mid()</a>
+                — Update meta data by meta ID</li>
+            <li id="update_cache"><a title="GB_Meta" href="../classes/GB_Meta/update_cache.xhtml">update_cache()</a>
+                — Update the metadata cache for the specified objects.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

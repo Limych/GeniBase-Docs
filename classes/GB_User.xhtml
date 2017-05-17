@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_User</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_User</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-user.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_User</h1>
+        <h4>GeniBase User class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_User
+            {<br/><ul class="none"><li>// members</li><li>public  <a href="#members">$data</a>;
+                    </li><li>public integer <a href="#members">$ID</a> =
+                        0;
+                    </li><li>public array <a href="#members">$caps</a> =
+                        ;
+                    </li><li>public  <a href="#members">$cap_key</a>;
+                    </li><li>public array <a href="#members">$roles</a> =
+                        ;
+                    </li><li>public array <a href="#members">$allcaps</a> =
+                        ;
+                    </li><li>public string <a href="#members">$filter</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public GB_User <a title="GB_User" href="../classes/GB_User/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/init.xhtml">init</a>()
+                    </li><li>public static void <a title="GB_User" href="../classes/GB_User/generate_hash.xhtml">generate_hash</a>()
+                    </li><li>public static string <a title="GB_User" href="../classes/GB_User/hash.xhtml">hash</a>()
+                    </li><li>public static  <a title="GB_User" href="../classes/GB_User/get_data_by.xhtml">get_data_by</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/__isset.xhtml">__isset</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="GB_User" href="../classes/GB_User/exists.xhtml">exists</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/get.xhtml">get</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/has_prop.xhtml">has_prop</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/to_array.xhtml">to_array</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/_init_caps.xhtml">_init_caps</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/get_role_caps.xhtml">get_role_caps</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/add_role.xhtml">add_role</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/remove_role.xhtml">remove_role</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/set_role.xhtml">set_role</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/add_cap.xhtml">add_cap</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/remove_cap.xhtml">remove_cap</a>()
+                    </li><li>public void <a title="GB_User" href="../classes/GB_User/remove_all_caps.xhtml">remove_all_caps</a>()
+                    </li><li>public static array <a title="GB_User" href="../classes/GB_User/map_cap.xhtml">map_cap</a>()
+                    </li><li>public bool <a title="GB_User" href="../classes/GB_User/has_cap.xhtml">has_cap</a>()
+                    </li><li>public static int|bool <a title="GB_User" href="../classes/GB_User/add_meta.xhtml">add_meta</a>()
+                    </li><li>public static bool <a title="GB_User" href="../classes/GB_User/delete_meta.xhtml">delete_meta</a>()
+                    </li><li>public static mixed <a title="GB_User" href="../classes/GB_User/get_meta.xhtml">get_meta</a>()
+                    </li><li>public static int|bool <a title="GB_User" href="../classes/GB_User/update_meta.xhtml">update_meta</a>()
+                    </li><li>public mixed <a title="GB_User" href="../classes/GB_User/sanitize_field.xhtml">sanitize_field</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">40</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $ID. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">103</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">220 - 267</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method get_data_by() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">596 - 682</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method map_cap() has a Cyclomatic Complexity of 33. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">821 - 927</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method sanitize_field() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">821 - 927</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method sanitize_field() has an NPath complexity of 864. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">821 - 927</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method sanitize_field() has 107 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="ID"><strong>$ID</strong>
+                —
+                int<br/><span class="indent">The user's ID.</span></li>
+            <li id="allcaps"><strong>$allcaps</strong>
+                —
+                array<br/><span class="indent">All capabilities the user has, including individual and role based.</span></li>
+            <li id="cap_key"><strong>$cap_key</strong>
+                —
+                string<br/><span class="indent">User metadata option name.</span></li>
+            <li id="caps"><strong>$caps</strong>
+                —
+                array<br/><span class="indent">The individual capabilities the user has been given.</span></li>
+            <li id="data"><strong>$data</strong>
+                —
+                array<br/><span class="indent">User data container.</span></li>
+            <li id="filter"><strong>$filter</strong>
+                —
+                string<br/><span class="indent">The filter context applied to user data fields.</span></li>
+            <li id="roles"><strong>$roles</strong>
+                —
+                array<br/><span class="indent">The roles the user is part of.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="GB_User" href="../classes/GB_User/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="__get"><a title="GB_User" href="../classes/GB_User/__get.xhtml">__get()</a>
+                — Magic method for accessing custom fields</li>
+            <li id="__isset"><a title="GB_User" href="../classes/GB_User/__isset.xhtml">__isset()</a>
+                — Magic method for checking the existence of a certain custom field</li>
+            <li id="__set"><a title="GB_User" href="../classes/GB_User/__set.xhtml">__set()</a>
+                — Magic method for setting custom fields</li>
+            <li id="_init_caps"><a title="GB_User" href="../classes/GB_User/_init_caps.xhtml">_init_caps()</a>
+                — Set up capability object properties.</li>
+            <li id="add_cap"><a title="GB_User" href="../classes/GB_User/add_cap.xhtml">add_cap()</a>
+                — Add capability and grant or deny access to capability.</li>
+            <li id="add_meta"><a title="GB_User" href="../classes/GB_User/add_meta.xhtml">add_meta()</a>
+                — Add meta data field to a user.</li>
+            <li id="add_role"><a title="GB_User" href="../classes/GB_User/add_role.xhtml">add_role()</a>
+                — Add role to user.</li>
+            <li id="delete_meta"><a title="GB_User" href="../classes/GB_User/delete_meta.xhtml">delete_meta()</a>
+                — Remove metadata matching criteria from a user.</li>
+            <li id="exists"><a title="GB_User" href="../classes/GB_User/exists.xhtml">exists()</a>
+                — Determine whether the user exists in the database.</li>
+            <li id="generate_hash">
+              <a title="GB_User" href="../classes/GB_User/generate_hash.xhtml">generate_hash()</a>
+            </li>
+            <li id="get"><a title="GB_User" href="../classes/GB_User/get.xhtml">get()</a>
+                — Retrieve the value of a property or meta key.</li>
+            <li id="get_data_by"><a title="GB_User" href="../classes/GB_User/get_data_by.xhtml">get_data_by()</a>
+                — Return only the main user fields</li>
+            <li id="get_meta"><a title="GB_User" href="../classes/GB_User/get_meta.xhtml">get_meta()</a>
+                — Retrieve user meta field for a user.</li>
+            <li id="get_role_caps"><a title="GB_User" href="../classes/GB_User/get_role_caps.xhtml">get_role_caps()</a>
+                — Retrieve all of the role capabilities and merge with individual capabilities.</li>
+            <li id="has_cap"><a title="GB_User" href="../classes/GB_User/has_cap.xhtml">has_cap()</a>
+                — Whether user has capability or role name.</li>
+            <li id="has_prop"><a title="GB_User" href="../classes/GB_User/has_prop.xhtml">has_prop()</a>
+                — Determine whether a property or meta key is set</li>
+            <li id="hash"><a title="GB_User" href="../classes/GB_User/hash.xhtml">hash()</a>
+                — Get current or set new user hash.</li>
+            <li id="init"><a title="GB_User" href="../classes/GB_User/init.xhtml">init()</a>
+                — Sets up object properties, including capabilities.</li>
+            <li id="map_cap"><a title="GB_User" href="../classes/GB_User/map_cap.xhtml">map_cap()</a>
+                — Map meta capabilities to primitive capabilities.</li>
+            <li id="remove_all_caps"><a title="GB_User" href="../classes/GB_User/remove_all_caps.xhtml">remove_all_caps()</a>
+                — Remove all of the capabilities of the user.</li>
+            <li id="remove_cap"><a title="GB_User" href="../classes/GB_User/remove_cap.xhtml">remove_cap()</a>
+                — Remove capability from user.</li>
+            <li id="remove_role"><a title="GB_User" href="../classes/GB_User/remove_role.xhtml">remove_role()</a>
+                — Remove role from user.</li>
+            <li id="sanitize_field"><a title="GB_User" href="../classes/GB_User/sanitize_field.xhtml">sanitize_field()</a>
+                — Sanitize user field based on context.</li>
+            <li id="set_role"><a title="GB_User" href="../classes/GB_User/set_role.xhtml">set_role()</a>
+                — Set the role of the user.</li>
+            <li id="to_array">
+              <a title="GB_User" href="../classes/GB_User/to_array.xhtml">to_array()</a>
+            </li>
+            <li id="update_meta"><a title="GB_User" href="../classes/GB_User/update_meta.xhtml">update_meta()</a>
+                — Update user meta field based on user ID.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - GB_Meta::delete</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="GB_Meta" href="../../classes/GB_Meta.xhtml">GB_Meta</a>
+          </li>
+          <li class="separator">delete</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/gb/class.gb-meta.php.xhtml#line469">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>GB_Meta::</small>delete</h1>
+        <h4>Delete metadata for the specified object.</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function delete(string
+        $meta_type,
+            int
+        $object_id,
+            string
+        $meta_key,
+            [string
+        $meta_value = '',
+            [boolean
+        $delete_all = false]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$meta_type</code>
+                —
+                string</dt>
+          <dd><br/>Type of object metadata is for (e.g., comment, post, or user)</dd>
+          <dt><code>$object_id</code>
+                —
+                int</dt>
+          <dd><br/>ID of the object metadata is for</dd>
+          <dt><code>$meta_key</code>
+                —
+                string</dt>
+          <dd><br/>Metadata key</dd>
+          <dt><code>$meta_value</code>
+                —
+                string</dt>
+          <dd><br/>Optional. Metadata value. Must be serializable if non-scalar. If specified,<br/>only delete metadata entries with this value. Otherwise, delete all entries with the specified<br/>           meta_key.</dd>
+          <dt><code>$delete_all</code>
+                —
+                boolean</dt>
+          <dd><br/>Optional, default is false. If true, delete matching metadata entries<br/>for all objects, ignoring the specified object_id. Otherwise, only delete matching<br/>           metadata entries for the specified object_id.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>bool</dt>
+          <dd>True on successful delete, false on failure.<br/>
+        </dd>
+        </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method delete() has a Cyclomatic Complexity of 16. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method delete() has an NPath complexity of 5760. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">469 - 593</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method delete() has 125 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

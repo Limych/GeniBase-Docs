@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Scripts</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Scripts</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-scripts.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Scripts</h1>
+        <h4>GeniBase Scripts enqueue class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Scripts
+                extends <a title="GB_Dependencies" href="../classes/GB_Dependencies.xhtml">GB_Dependencies</a>
+            {<br/><ul class="none"><li>// members</li><li>public  <a href="#members">$base_url</a>;
+                    </li><li>public  <a href="#members">$content_url</a>;
+                    </li><li>public  <a href="#members">$default_version</a>;
+                    </li><li>public array <a href="#members">$in_footer</a> =
+                        ;
+                    </li><li>public string <a href="#members">$concat</a> =
+                        '';
+                    </li><li>public string <a href="#members">$concat_version</a> =
+                        '';
+                    </li><li>public boolean <a href="#members">$do_concat</a> =
+                        false;
+                    </li><li>public string <a href="#members">$print_html</a> =
+                        '';
+                    </li><li>public string <a href="#members">$print_code</a> =
+                        '';
+                    </li><li>public string <a href="#members">$ext_handles</a> =
+                        '';
+                    </li><li>public string <a href="#members">$ext_version</a> =
+                        '';
+                    </li><li>public  <a href="#members">$default_dirs</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="GB_Dependencies">GB_Dependencies</span></li><li>public array <a href="#members">$registered</a>;
+                        </li><li>public array <a href="#members">$queue</a>;
+                        </li><li>public array <a href="#members">$to_do</a>;
+                        </li><li>public array <a href="#members">$done</a>;
+                        </li><li>public array <a href="#members">$args</a>;
+                        </li><li>public array <a href="#members">$groups</a>;
+                        </li><li>public integer <a href="#members">$group</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/init.xhtml">init</a>()
+                    </li><li>public array <a title="GB_Scripts" href="../classes/GB_Scripts/print_scripts.xhtml">print_scripts</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/print_extra_script.xhtml">print_extra_script</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/do_item.xhtml">do_item</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/localize.xhtml">localize</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/set_group.xhtml">set_group</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/all_deps.xhtml">all_deps</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/do_head_items.xhtml">do_head_items</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/do_footer_items.xhtml">do_footer_items</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/in_default_dir.xhtml">in_default_dir</a>()
+                    </li><li>public void <a title="GB_Scripts" href="../classes/GB_Scripts/reset.xhtml">reset</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="GB_Dependencies">GB_Dependencies</span></li><li>public array <a title="GB_Dependencies" href="../classes/GB_Dependencies/do_items.xhtml">do_items</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/do_item.xhtml">do_item</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/all_deps.xhtml">all_deps</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/add.xhtml">add</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/add_data.xhtml">add_data</a>()
+                        </li><li>public mixed <a title="GB_Dependencies" href="../classes/GB_Dependencies/get_data.xhtml">get_data</a>()
+                        </li><li>public void <a title="GB_Dependencies" href="../classes/GB_Dependencies/remove.xhtml">remove</a>()
+                        </li><li>public void <a title="GB_Dependencies" href="../classes/GB_Dependencies/enqueue.xhtml">enqueue</a>()
+                        </li><li>public void <a title="GB_Dependencies" href="../classes/GB_Dependencies/dequeue.xhtml">dequeue</a>()
+                        </li><li>protected boolean <a title="GB_Dependencies" href="../classes/GB_Dependencies/recurse_deps.xhtml">recurse_deps</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/query.xhtml">query</a>()
+                        </li><li>public bool <a title="GB_Dependencies" href="../classes/GB_Dependencies/set_group.xhtml">set_group</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="GB_Dependencies" href="../classes/GB_Dependencies.xhtml">GB_Dependencies</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">115 - 218</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method do_item() has a Cyclomatic Complexity of 23. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">115 - 218</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method do_item() has an NPath complexity of 248832. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">115 - 218</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method do_item() has 104 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">270</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="args"><strong>$args</strong>
+                —
+                array<br/><span class="indent">An array of additional arguments passed when a handle is registered.</span></li>
+            <li id="base_url">
+              <strong>$base_url</strong>
+            </li>
+            <li id="concat">
+              <strong>$concat</strong>
+            </li>
+            <li id="concat_version">
+              <strong>$concat_version</strong>
+            </li>
+            <li id="content_url">
+              <strong>$content_url</strong>
+            </li>
+            <li id="default_dirs">
+              <strong>$default_dirs</strong>
+            </li>
+            <li id="default_version">
+              <strong>$default_version</strong>
+            </li>
+            <li id="do_concat">
+              <strong>$do_concat</strong>
+            </li>
+            <li id="done"><strong>$done</strong>
+                —
+                array<br/><span class="indent">An array of _GB_Dependency handle objects already queued.</span></li>
+            <li id="ext_handles">
+              <strong>$ext_handles</strong>
+            </li>
+            <li id="ext_version">
+              <strong>$ext_version</strong>
+            </li>
+            <li id="group"><strong>$group</strong>
+                —
+                int<br/><span class="indent">A handle group to enqueue.</span></li>
+            <li id="groups"><strong>$groups</strong>
+                —
+                array<br/><span class="indent">An array of handle groups to enqueue.</span></li>
+            <li id="in_footer">
+              <strong>$in_footer</strong>
+            </li>
+            <li id="print_code">
+              <strong>$print_code</strong>
+            </li>
+            <li id="print_html">
+              <strong>$print_html</strong>
+            </li>
+            <li id="queue"><strong>$queue</strong>
+                —
+                array<br/><span class="indent">An array of queued _GB_Dependency handle objects.</span></li>
+            <li id="registered"><strong>$registered</strong>
+                —
+                array<br/><span class="indent">An array of registered handle objects.</span></li>
+            <li id="to_do"><strong>$to_do</strong>
+                —
+                array<br/><span class="indent">An array of _GB_Dependency handle objects to queue.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="all_deps">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/all_deps.xhtml">all_deps()</a>
+            </li>
+            <li id="do_footer_items">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/do_footer_items.xhtml">do_footer_items()</a>
+            </li>
+            <li id="do_head_items">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/do_head_items.xhtml">do_head_items()</a>
+            </li>
+            <li id="do_item">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/do_item.xhtml">do_item()</a>
+            </li>
+            <li id="in_default_dir">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/in_default_dir.xhtml">in_default_dir()</a>
+            </li>
+            <li id="init">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/init.xhtml">init()</a>
+            </li>
+            <li id="localize"><a title="GB_Scripts" href="../classes/GB_Scripts/localize.xhtml">localize()</a>
+                — Localizes a script</li>
+            <li id="print_extra_script">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/print_extra_script.xhtml">print_extra_script()</a>
+            </li>
+            <li id="print_scripts"><a title="GB_Scripts" href="../classes/GB_Scripts/print_scripts.xhtml">print_scripts()</a>
+                — Prints scripts.</li>
+            <li id="reset">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/reset.xhtml">reset()</a>
+            </li>
+            <li id="set_group">
+              <a title="GB_Scripts" href="../classes/GB_Scripts/set_group.xhtml">set_group()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="GB_Dependencies" href="../classes/GB_Dependencies.xhtml">GB_Dependencies</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="recurse_deps"><a title="GB_Dependencies" href="../classes/GB_Dependencies/recurse_deps.xhtml">recurse_deps()</a>
+                — Recursively search the passed dependency tree for $handle</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="add"><a title="GB_Dependencies" href="../classes/GB_Dependencies/add.xhtml">add()</a>
+                — Register an item.</li>
+            <li id="add_data"><a title="GB_Dependencies" href="../classes/GB_Dependencies/add_data.xhtml">add_data()</a>
+                — Add extra item data.</li>
+            <li id="all_deps"><a title="GB_Dependencies" href="../classes/GB_Dependencies/all_deps.xhtml">all_deps()</a>
+                — Determine dependencies.</li>
+            <li id="dequeue"><a title="GB_Dependencies" href="../classes/GB_Dependencies/dequeue.xhtml">dequeue()</a>
+                — Dequeue an item or items.</li>
+            <li id="do_item"><a title="GB_Dependencies" href="../classes/GB_Dependencies/do_item.xhtml">do_item()</a>
+                — Process a dependency.</li>
+            <li id="do_items"><a title="GB_Dependencies" href="../classes/GB_Dependencies/do_items.xhtml">do_items()</a>
+                — Process the items and dependencies.</li>
+            <li id="enqueue"><a title="GB_Dependencies" href="../classes/GB_Dependencies/enqueue.xhtml">enqueue()</a>
+                — Queue an item or items.</li>
+            <li id="get_data"><a title="GB_Dependencies" href="../classes/GB_Dependencies/get_data.xhtml">get_data()</a>
+                — Get extra item data.</li>
+            <li id="query"><a title="GB_Dependencies" href="../classes/GB_Dependencies/query.xhtml">query()</a>
+                — Query list for an item.</li>
+            <li id="remove"><a title="GB_Dependencies" href="../classes/GB_Dependencies/remove.xhtml">remove()</a>
+                — Un-register an item or items.</li>
+            <li id="set_group"><a title="GB_Dependencies" href="../classes/GB_Dependencies/set_group.xhtml">set_group()</a>
+                — Set item group, unless already in a lower group.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-26T15:50:21+00:00 (commit #<span title="b1f470cbbbf97994127ad7c3f2e02cd83f7f26ce">b1f470c</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#64:
+
+Система автоматического перевода личных имён на другие языки
+https://github.com/Limych/GeniBase/issues/issue/64</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-25T21:34:13+00:00 (commit #<span title="4a7821b267b42de13f945f5f1eab3a59dce64bb9">4a7821b</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Hooks API incapsulated to static class.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-19T20:07:04+00:00 (commit #<span title="702bc18f6eb12f2f2f269f785956f3fe8ea63cbc">702bc18</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:34:17+00:00 (commit #<span title="28c49e6a70fcdc5aa6a9ebeadc4f3767bc13b505">28c49e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:05:20+00:00 (commit #<span title="dafa260b3027eb64738643ab54e2d7d371811e04">dafa260</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-13T19:41:13+00:00 (commit #<span title="839eee57fbf4855db14661b752ce955fa73e0065">839eee5</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Setting user ID cookie and some minor code changes.
+
+#50</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added URLs control functions.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:37:49+00:00 (commit #<span title="ccc9d214a378ce12974974f1f9b4202fcc03ea05">ccc9d21</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:04:10+00:00 (commit #<span title="8642b90d9ac0863d3bf302aab723aa06e1cb957a">8642b90</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

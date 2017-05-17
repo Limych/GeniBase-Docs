@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Leafo\ScssPhp\Server</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Leafo_ScssPhp">Leafo\ScssPhp</a>
+          </li>
+          <li class="separator">Server</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/scssphp/src/Server.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Leafo\ScssPhp\</small>Server</h1>
+        <h4>Server</h4>
+        <p/>
+        <ul>
+          <li>Author: Leaf Corcoran &lt;leafot@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Server
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$showErrorsAsCSS</a>;
+                    </li><li>private  <a href="#members">$dir</a>;
+                    </li><li>private  <a href="#members">$cacheDir</a>;
+                    </li><li>private <span title="\Leafo\ScssPhp\Compiler">Compiler</span> <a href="#members">$scss</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/join.xhtml">join</a>()
+                    </li><li>protected string|null <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/inputName.xhtml">inputName</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/findInput.xhtml">findInput</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/cacheName.xhtml">cacheName</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/metadataName.xhtml">metadataName</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/needsCompile.xhtml">needsCompile</a>()
+                    </li><li>protected string|null <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/getIfModifiedSinceHeader.xhtml">getIfModifiedSinceHeader</a>()
+                    </li><li>protected string|null <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/getIfNoneMatchHeader.xhtml">getIfNoneMatchHeader</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/compile.xhtml">compile</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/createErrorCSS.xhtml">createErrorCSS</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/showErrorsAsCSS.xhtml">showErrorsAsCSS</a>()
+                    </li><li>public string|bool <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/compileFile.xhtml">compileFile</a>()
+                    </li><li>public bool <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/checkedCompile.xhtml">checkedCompile</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/serve.xhtml">serve</a>()
+                    </li><li>public string <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/checkedCachedCompile.xhtml">checkedCachedCompile</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/__construct.xhtml">__construct</a>()
+                    </li><li>public static void <a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/serveFrom.xhtml">serveFrom</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">215</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $in. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">219</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$elapsed'.</td>
+            </tr>
+            <tr>
+              <td class="line">221</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $v. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">222</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $t. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">292</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $in. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">298</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $pi. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">321</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $in. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">404</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $v. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">419</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $in. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="cacheDir"><strong>$cacheDir</strong>
+                —
+                string</li>
+            <li id="dir"><strong>$dir</strong>
+                —
+                string</li>
+            <li id="scss"><strong>$scss</strong>
+                —
+                <a title="\Leafo\ScssPhp\Compiler" href="../classes/_Leafo_ScssPhp_Compiler.xhtml">\Leafo\ScssPhp\Compiler</a></li>
+            <li id="showErrorsAsCSS"><strong>$showErrorsAsCSS</strong>
+                —
+                boolean</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="cacheName"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/cacheName.xhtml">cacheName()</a>
+                — Get path to cached .</li>
+            <li id="compile"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/compile.xhtml">compile()</a>
+                — Compile .</li>
+            <li id="createErrorCSS"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/createErrorCSS.xhtml">createErrorCSS()</a>
+                — Format error as a pseudo-element in CSS</li>
+            <li id="findInput"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/findInput.xhtml">findInput()</a>
+                — Get path to requested .</li>
+            <li id="getIfModifiedSinceHeader"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/getIfModifiedSinceHeader.xhtml">getIfModifiedSinceHeader()</a>
+                — Get If-Modified-Since header from client request</li>
+            <li id="getIfNoneMatchHeader"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/getIfNoneMatchHeader.xhtml">getIfNoneMatchHeader()</a>
+                — Get If-None-Match header from client request</li>
+            <li id="inputName"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/inputName.xhtml">inputName()</a>
+                — Get name of requested .</li>
+            <li id="join"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/join.xhtml">join()</a>
+                — Join path components</li>
+            <li id="metadataName"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/metadataName.xhtml">metadataName()</a>
+                — Get path to meta data</li>
+            <li id="needsCompile"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/needsCompile.xhtml">needsCompile()</a>
+                — Determine whether .</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="checkedCachedCompile"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/checkedCachedCompile.xhtml">checkedCachedCompile()</a>
+                — Based on explicit input/output files does a full change check on cache before compiling.</li>
+            <li id="checkedCompile"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/checkedCompile.xhtml">checkedCompile()</a>
+                — Check if file need compiling</li>
+            <li id="compileFile"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/compileFile.xhtml">compileFile()</a>
+                — Compile .</li>
+            <li id="serve"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/serve.xhtml">serve()</a>
+                — Compile requested scss and serve css.</li>
+            <li id="serveFrom"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/serveFrom.xhtml">serveFrom()</a>
+                — Helper method to serve compiled scss</li>
+            <li id="showErrorsAsCSS"><a title="Leafo\ScssPhp\Server" href="../classes/Leafo_ScssPhp_Server/showErrorsAsCSS.xhtml">showErrorsAsCSS()</a>
+                — Render errors as a pseudo-element within valid CSS, displaying the errors on any page that includes this CSS.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-02T12:09:45+00:00 (commit #<span title="80007ffa3d809662d54915ee053689a341000910">80007ff</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added advertizing.
+Added SCSS processor.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ww1_database_solders</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ww1_database_solders</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/class.ww1-database.php.xhtml#line115">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ww1_database_solders</h1>
+        <h4>Класс работы с базой данных нижних чинов</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ww1_database_solders
+                extends <a title="ww1_database" href="../classes/ww1_database.xhtml">ww1_database</a>
+            {<br/><ul class="none"><li>// members</li><li>public boolean <a href="#members">$surname_ext</a> =
+                        FALSE;
+                    </li><li>public boolean <a href="#members">$name_ext</a> =
+                        FALSE;
+                    </li><li>private array <a href="#members">$simple_fields</a> =
+                        ;
+                    </li><li>private array <a href="#members">$extended_fields</a> =
+                        ;
+                    </li><li>private array <a href="#members">$numeric_fields</a> =
+                        ;
+                    </li><li>private array <a href="#members">$ids_fields</a> =
+                        ;
+                    </li><li>private array <a href="#members">$dictionary_fields</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="ww1_database">ww1_database</span></li><li>protected  <a href="#members">$query_mode</a>;
+                        </li><li>public  <a href="#members">$query</a>;
+                        </li><li>protected  <a href="#members">$page</a>;
+                        </li><li>public  <a href="#members">$have_query</a>;
+                        </li><li>public  <a href="#members">$records_cnt</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ww1_database_solders" href="../classes/ww1_database_solders/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ww1_database_solders" href="../classes/ww1_database_solders/search_form.xhtml">search_form</a>()
+                    </li><li>public void <a title="ww1_database_solders" href="../classes/ww1_database_solders/do_search.xhtml">do_search</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="ww1_database">ww1_database</span></li><li>public void <a title="ww1_database" href="../classes/ww1_database/__construct.xhtml">__construct</a>()
+                        </li><li>public abstract void <a title="ww1_database" href="../classes/ww1_database/search_form.xhtml">search_form</a>()
+                        </li><li>public abstract void <a title="ww1_database" href="../classes/ww1_database/do_search.xhtml">do_search</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="ww1_database" href="../classes/ww1_database.xhtml">ww1_database</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">209 - 259</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method __construct() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">247</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$query'.</td>
+            </tr>
+            <tr>
+              <td class="line">248</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $rq. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">264 - 353</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method search_form() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">359 - 534</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method do_search() has a Cyclomatic Complexity of 40. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">359 - 534</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method do_search() has an NPath complexity of 705024. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">359 - 534</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method do_search() has 176 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">486</td>
+            <td>Добавить получение результатов поиска из кэша</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="dictionary_fields"><strong>$dictionary_fields</strong>
+                —
+                array<br/><span class="indent">List of fields that have dictionaries.</span></li>
+            <li id="extended_fields"><strong>$extended_fields</strong>
+                —
+                array<br/><span class="indent">List of fields for extended search mode.</span></li>
+            <li id="ids_fields"><strong>$ids_fields</strong>
+                —
+                array<br/><span class="indent">List of fields with IDs.</span></li>
+            <li id="numeric_fields"><strong>$numeric_fields</strong>
+                —
+                array<br/><span class="indent">List of fields with numeric values.</span></li>
+            <li id="simple_fields"><strong>$simple_fields</strong>
+                —
+                array<br/><span class="indent">List of fields for simple search mode.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="page">
+              <strong>$page</strong>
+            </li>
+            <li id="query_mode">
+              <strong>$query_mode</strong>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="have_query">
+              <strong>$have_query</strong>
+            </li>
+            <li id="name_ext"><strong>$name_ext</strong>
+                —
+                boolean<br/><span class="indent">If TRUE, the name was automatically expanded with search keys.</span></li>
+            <li id="query">
+              <strong>$query</strong>
+            </li>
+            <li id="records_cnt">
+              <strong>$records_cnt</strong>
+            </li>
+            <li id="surname_ext"><strong>$surname_ext</strong>
+                —
+                boolean<br/><span class="indent">If TRUE, the surname was automatically expanded with search keys.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ww1_database_solders" href="../classes/ww1_database_solders/__construct.xhtml">__construct()</a>
+                — Создание экземпляра класса.</li>
+            <li id="do_search"><a title="ww1_database_solders" href="../classes/ww1_database_solders/do_search.xhtml">do_search()</a>
+                — Осуществление поиска и генерация класса результатов поиска.</li>
+            <li id="search_form"><a title="ww1_database_solders" href="../classes/ww1_database_solders/search_form.xhtml">search_form()</a>
+                — Генерация html-формы поиска.</li>
+          </ul>
+          <h3>Inherited from <a title="ww1_database" href="../classes/ww1_database.xhtml">ww1_database</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="do_search"><a title="ww1_database" href="../classes/ww1_database/do_search.xhtml">do_search()</a>
+                — Осуществление поиска и генерация класса результатов поиска.</li>
+            <li id="search_form"><a title="ww1_database" href="../classes/ww1_database/search_form.xhtml">search_form()</a>
+                — Генерация html-формы поиска.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-01T20:46:28+00:00 (commit #<span title="4a5decefe2ab5230564015be542e3cf9be72409e">4a5dece</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#63:
+
+Оптимизация запросов пользователей
+https://github.com/Limych/GeniBase/issues/issue/63</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-26T15:50:21+00:00 (commit #<span title="b1f470cbbbf97994127ad7c3f2e02cd83f7f26ce">b1f470c</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#64:
+
+Система автоматического перевода личных имён на другие языки
+https://github.com/Limych/GeniBase/issues/issue/64</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-23T11:15:12+00:00 (commit #<span title="a0eff4514f29d562573b242521ecae4cd47d8053">a0eff45</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">New pagination function. And fixed error of cron usage.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-19T00:27:34+00:00 (commit #<span title="58e9528b5353d1199a09034f83b3bdfdc9efca74">58e9528</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#60:
+
+Не выводятся дополнительные неформализованные поля
+https://github.com/Limych/GeniBase/issues/issue/60</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T17:00:10+00:00 (commit #<span title="4176d2ef4a62f7f90e95df2c00192f10a096d6b5">4176d2e</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#20:
+
+Перевод всего встроенного в систему текста на gettext. Английская и
+русская локализации системы
+https://github.com/Limych/GeniBase/issues/issue/20</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T08:43:40+00:00 (commit #<span title="a1ec47c00e165cf307f4c8cdf8d80feb788f97ce">a1ec47c</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#20, #53, #58, #55, #56, #57:
+
+Перевод всего встроенного в систему текста на gettext. Английская и
+русская локализации системы
+https://github.com/Limych/GeniBase/issues/issue/20</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-14T17:05:33+00:00 (commit #<span title="1e65a194f8419bba8924253120ed110f8ff24601">1e65a19</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#20:
+
+Перевод всего встроенного в систему текста на gettext
+https://github.com/Limych/GeniBase/issues/issue/20
+
+Also all non-GeniBase code moved from core folder to source root.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-13T19:41:13+00:00 (commit #<span title="839eee57fbf4855db14661b752ce955fa73e0065">839eee5</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Setting user ID cookie and some minor code changes.
+
+#50</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-11T22:03:11+00:00 (commit #<span title="bff9e2eec4db48af0f018eba6ca7de7aaeb58800">bff9e2e</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Renamed some SQL-tables and fields and some bugfixes.
+
+#28, #43</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-11T12:12:23+00:00 (commit #<span title="b00403e7b4bc198af8934266471c05a3bcba6dae">b00403e</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Minor optimizations and bugfixes.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-10T20:57:39+00:00 (commit #<span title="e88935793ee1898a441480dfbeeff3fef3ae23c0">e889357</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Some minor changes and bugfixes.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added URLs control functions.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T21:28:29+00:00 (commit #<span title="68c7d2a066cabd9986a161bee3aed92adabf743b">68c7d2a</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Modified sorting of fused search results.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

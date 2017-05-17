@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - POMO_StringReader</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">POMO_StringReader</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/pomo/streams.php.xhtml#line206">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>POMO_StringReader</h1>
+        <h4>Provides file-like methods for manipulating a string instead of a physical file.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class POMO_StringReader
+                extends <a title="POMO_Reader" href="../classes/POMO_Reader.xhtml">POMO_Reader</a>
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$_str</a> =
+                        '';
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="POMO_Reader">POMO_Reader</span></li><li>public string <a href="#members">$endian</a>;
+                        </li><li>public string <a href="#members">$_post</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="POMO_StringReader" href="../classes/POMO_StringReader/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="POMO_StringReader" href="../classes/POMO_StringReader/read.xhtml">read</a>()
+                    </li><li>public int <a title="POMO_StringReader" href="../classes/POMO_StringReader/seekto.xhtml">seekto</a>()
+                    </li><li>public void <a title="POMO_StringReader" href="../classes/POMO_StringReader/length.xhtml">length</a>()
+                    </li><li>public void <a title="POMO_StringReader" href="../classes/POMO_StringReader/read_all.xhtml">read_all</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="POMO_Reader">POMO_Reader</span></li><li>public void <a title="POMO_Reader" href="../classes/POMO_Reader/__construct.xhtml">__construct</a>()
+                        </li><li>public void <a title="POMO_Reader" href="../classes/POMO_Reader/setEndian.xhtml">setEndian</a>()
+                        </li><li>public mixed <a title="POMO_Reader" href="../classes/POMO_Reader/readint32.xhtml">readint32</a>()
+                        </li><li>public mixed <a title="POMO_Reader" href="../classes/POMO_Reader/readint32array.xhtml">readint32array</a>()
+                        </li><li>public string <a title="POMO_Reader" href="../classes/POMO_Reader/substr.xhtml">substr</a>()
+                        </li><li>public int <a title="POMO_Reader" href="../classes/POMO_Reader/strlen.xhtml">strlen</a>()
+                        </li><li>public array <a title="POMO_Reader" href="../classes/POMO_Reader/str_split.xhtml">str_split</a>()
+                        </li><li>public void <a title="POMO_Reader" href="../classes/POMO_Reader/pos.xhtml">pos</a>()
+                        </li><li>public void <a title="POMO_Reader" href="../classes/POMO_Reader/is_resource.xhtml">is_resource</a>()
+                        </li><li>public void <a title="POMO_Reader" href="../classes/POMO_Reader/close.xhtml">close</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="POMO_Reader" href="../classes/POMO_Reader.xhtml">POMO_Reader</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="_post">
+              <strong>$_post</strong>
+            </li>
+            <li id="_str">
+              <strong>$_str</strong>
+            </li>
+            <li id="endian">
+              <strong>$endian</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="POMO_StringReader" href="../classes/POMO_StringReader/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="length">
+              <a title="POMO_StringReader" href="../classes/POMO_StringReader/length.xhtml">length()</a>
+            </li>
+            <li id="read">
+              <a title="POMO_StringReader" href="../classes/POMO_StringReader/read.xhtml">read()</a>
+            </li>
+            <li id="read_all">
+              <a title="POMO_StringReader" href="../classes/POMO_StringReader/read_all.xhtml">read_all()</a>
+            </li>
+            <li id="seekto">
+              <a title="POMO_StringReader" href="../classes/POMO_StringReader/seekto.xhtml">seekto()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="POMO_Reader" href="../classes/POMO_Reader.xhtml">POMO_Reader</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="close">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/close.xhtml">close()</a>
+            </li>
+            <li id="is_resource">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/is_resource.xhtml">is_resource()</a>
+            </li>
+            <li id="pos">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/pos.xhtml">pos()</a>
+            </li>
+            <li id="readint32"><a title="POMO_Reader" href="../classes/POMO_Reader/readint32.xhtml">readint32()</a>
+                — Reads a 32bit Integer from the Stream</li>
+            <li id="readint32array"><a title="POMO_Reader" href="../classes/POMO_Reader/readint32array.xhtml">readint32array()</a>
+                — Reads an array of 32-bit Integers from the Stream</li>
+            <li id="setEndian"><a title="POMO_Reader" href="../classes/POMO_Reader/setEndian.xhtml">setEndian()</a>
+                — Sets the endianness of the file.</li>
+            <li id="str_split">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/str_split.xhtml">str_split()</a>
+            </li>
+            <li id="strlen">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/strlen.xhtml">strlen()</a>
+            </li>
+            <li id="substr">
+              <a title="POMO_Reader" href="../classes/POMO_Reader/substr.xhtml">substr()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T23:37:10+00:00 (commit #<span title="ad7594499331fb44db398a2fbec3c30ab62266f3">ad75944</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Fixes for PHP 7 compatibility</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-17T22:34:17+00:00 (commit #<span title="28c49e6a70fcdc5aa6a9ebeadc4f3767bc13b505">28c49e6</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-13T19:41:13+00:00 (commit #<span title="839eee57fbf4855db14661b752ce955fa73e0065">839eee5</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Setting user ID cookie and some minor code changes.
+
+#50</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:37:49+00:00 (commit #<span title="ccc9d214a378ce12974974f1f9b4202fcc03ea05">ccc9d21</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-05T15:04:10+00:00 (commit #<span title="8642b90d9ac0863d3bf302aab723aa06e1cb957a">8642b90</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added check for bot users.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

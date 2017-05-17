@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Leafo\ScssPhp\Compiler</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Leafo_ScssPhp">Leafo\ScssPhp</a>
+          </li>
+          <li class="separator">Compiler</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/scssphp/src/Compiler.php.xhtml#line56">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Leafo\ScssPhp\</small>Compiler</h1>
+        <h4>SCSS compiler</h4>
+        <p/>
+        <ul>
+          <li>Author: Leaf Corcoran &lt;leafot@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Compiler
+            {<br/><ul class="none"><li>// constants</li><li>const LINE_COMMENTS = 1;</li><li>const DEBUG_INFO = 2;</li><li>const WITH_RULE = 1;</li><li>const WITH_MEDIA = 2;</li><li>const WITH_SUPPORTS = 4;</li><li>const WITH_ALL = 7;</li></ul><ul class="none"><li>// members</li><li>protected static array <a href="#members">$operatorNames</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$namespaces</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$true</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$false</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$null</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$nullString</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$defaultValue</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$selfSelector</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$emptyList</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$emptyMap</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$emptyString</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$with</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$without</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$importPaths</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$importCache</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$importedFiles</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$userFunctions</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$registeredVars</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$registeredFeatures</a> =
+                        ;
+                    </li><li>protected <a href="#members">$encoding</a> =
+                        null;
+                    </li><li>protected <a href="#members">$lineNumberStyle</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$formatter</a> =
+                        'Leafo\ScssPhp\Formatter\Nested';
+                    </li><li>protected  <a href="#members">$rootEnv</a>;
+                    </li><li>protected  <a href="#members">$rootBlock</a>;
+                    </li><li>private  <a href="#members">$indentLevel</a>;
+                    </li><li>private  <a href="#members">$commentsSeen</a>;
+                    </li><li>private  <a href="#members">$extends</a>;
+                    </li><li>private  <a href="#members">$extendsMap</a>;
+                    </li><li>private  <a href="#members">$parsedFiles</a>;
+                    </li><li>private  <a href="#members">$env</a>;
+                    </li><li>private  <a href="#members">$scope</a>;
+                    </li><li>private  <a href="#members">$parser</a>;
+                    </li><li>private  <a href="#members">$sourceNames</a>;
+                    </li><li>private  <a href="#members">$sourceIndex</a>;
+                    </li><li>private  <a href="#members">$sourceLine</a>;
+                    </li><li>private  <a href="#members">$sourceColumn</a>;
+                    </li><li>private  <a href="#members">$storeEnv</a>;
+                    </li><li>private  <a href="#members">$charsetSeen</a>;
+                    </li><li>private  <a href="#members">$stderr</a>;
+                    </li><li>private  <a href="#members">$shouldEvaluate</a>;
+                    </li><li>private  <a href="#members">$ignoreErrors</a>;
+                    </li><li>protected static array <a href="#members">$libIf</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libIndex</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libRgb</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libRgba</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libAdjustColor</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libChangeColor</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libScaleColor</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libIeHexStr</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libRed</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libGreen</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libBlue</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libAlpha</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libOpacity</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMix</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libHsl</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libHsla</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libHue</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libSaturation</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libLightness</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libAdjustHue</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libLighten</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libDarken</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libSaturate</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libDesaturate</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libGrayscale</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libComplement</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libInvert</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libOpacify</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libFadeIn</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libTransparentize</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libFadeOut</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libUnquote</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libQuote</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libPercentage</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libRound</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libFloor</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libCeil</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libAbs</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libLength</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libNth</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libSetNth</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapGet</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapKeys</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapValues</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapRemove</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapHasKey</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMapMerge</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libKeywords</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libJoin</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libAppend</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libTypeOf</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libUnit</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libUnitless</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libComparable</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libStrIndex</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libStrInsert</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libStrLength</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libStrSlice</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libToLowerCase</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libToUpperCase</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libFeatureExists</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libFunctionExists</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libGlobalVariableExists</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libMixinExists</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libVariableExists</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libRandom</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$libInspect</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compile.xhtml">compile</a>()
+                    </li><li>private Parser <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isSelfExtend.xhtml">isSelfExtend</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushExtends.xhtml">pushExtends</a>()
+                    </li><li>protected OutputBlock <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/makeOutputBlock.xhtml">makeOutputBlock</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileRoot.xhtml">compileRoot</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/missingSelectors.xhtml">missingSelectors</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectors.xhtml">flattenSelectors</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtends.xhtml">matchExtends</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtendsSingle.xhtml">matchExtendsSingle</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/combineSelectorSingle.xhtml">combineSelectorSingle</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMedia.xhtml">compileMedia</a>()
+                    </li><li>protected OutputBlock <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mediaParent.xhtml">mediaParent</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileDirective.xhtml">compileDirective</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileAtRoot.xhtml">compileAtRoot</a>()
+                    </li><li>private array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/spliceTree.xhtml">spliceTree</a>()
+                    </li><li>private integer <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileWith.xhtml">compileWith</a>()
+                    </li><li>private Environment <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/filterWithout.xhtml">filterWithout</a>()
+                    </li><li>private boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isWithout.xhtml">isWithout</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileKeyframeBlock.xhtml">compileKeyframeBlock</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileNestedBlock.xhtml">compileNestedBlock</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileBlock.xhtml">compileBlock</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileComment.xhtml">compileComment</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelectors.xhtml">evalSelectors</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelector.xhtml">evalSelector</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelectorPart.xhtml">evalSelectorPart</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/collapseSelectors.xhtml">collapseSelectors</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectorSingle.xhtml">flattenSelectorSingle</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileSelector.xhtml">compileSelector</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileSelectorPart.xhtml">compileSelectorPart</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hasSelectorPlaceholder.xhtml">hasSelectorPlaceholder</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildren.xhtml">compileChildren</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildrenNoReturn.xhtml">compileChildrenNoReturn</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMediaQuery.xhtml">compileMediaQuery</a>()
+                    </li><li>protected array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeMediaTypes.xhtml">mergeMediaTypes</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileImport.xhtml">compileImport</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChild.xhtml">compileChild</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/expToString.xhtml">expToString</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isTruthy.xhtml">isTruthy</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/shouldEval.xhtml">shouldEval</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/reduce.xhtml">reduce</a>()
+                    </li><li>private array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fncall.xhtml">fncall</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/normalizeName.xhtml">normalizeName</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/normalizeValue.xhtml">normalizeValue</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAddNumberNumber.xhtml">opAddNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opMulNumberNumber.xhtml">opMulNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opSubNumberNumber.xhtml">opSubNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opDivNumberNumber.xhtml">opDivNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opModNumberNumber.xhtml">opModNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAdd.xhtml">opAdd</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAnd.xhtml">opAnd</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opOr.xhtml">opOr</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opColorColor.xhtml">opColorColor</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opColorNumber.xhtml">opColorNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opNumberColor.xhtml">opNumberColor</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opEq.xhtml">opEq</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opNeq.xhtml">opNeq</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opGteNumberNumber.xhtml">opGteNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opGtNumberNumber.xhtml">opGtNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opLteNumberNumber.xhtml">opLteNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opLtNumberNumber.xhtml">opLtNumberNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opCmpNumberNumber.xhtml">opCmpNumberNumber</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toBool.xhtml">toBool</a>()
+                    </li><li>public string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileValue.xhtml">compileValue</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenList.xhtml">flattenList</a>()
+                    </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileStringContent.xhtml">compileStringContent</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractInterpolation.xhtml">extractInterpolation</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/multiplySelectors.xhtml">multiplySelectors</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/joinSelectors.xhtml">joinSelectors</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/multiplyMedia.xhtml">multiplyMedia</a>()
+                    </li><li>private array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compactEnv.xhtml">compactEnv</a>()
+                    </li><li>private Environment <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractEnv.xhtml">extractEnv</a>()
+                    </li><li>protected Environment <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushEnv.xhtml">pushEnv</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/popEnv.xhtml">popEnv</a>()
+                    </li><li>protected Environment <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getStoreEnv.xhtml">getStoreEnv</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/set.xhtml">set</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setExisting.xhtml">setExisting</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setRaw.xhtml">setRaw</a>()
+                    </li><li>public mixed <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/get.xhtml">get</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/has.xhtml">has</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/injectVariables.xhtml">injectVariables</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setVariables.xhtml">setVariables</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/unsetVariable.xhtml">unsetVariable</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getVariables.xhtml">getVariables</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addParsedFile.xhtml">addParsedFile</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getParsedFiles.xhtml">getParsedFiles</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addImportPath.xhtml">addImportPath</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setImportPaths.xhtml">setImportPaths</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setNumberPrecision.xhtml">setNumberPrecision</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setFormatter.xhtml">setFormatter</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setLineNumberStyle.xhtml">setLineNumberStyle</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/registerFunction.xhtml">registerFunction</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/unregisterFunction.xhtml">unregisterFunction</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addFeature.xhtml">addFeature</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/importFile.xhtml">importFile</a>()
+                    </li><li>public string|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/findImport.xhtml">findImport</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setEncoding.xhtml">setEncoding</a>()
+                    </li><li>public Compiler <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setIgnoreErrors.xhtml">setIgnoreErrors</a>()
+                    </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/throwError.xhtml">throwError</a>()
+                    </li><li>private void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fileExists.xhtml">fileExists</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callScssFunction.xhtml">callScssFunction</a>()
+                    </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callNativeFunction.xhtml">callNativeFunction</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getBuiltinFunction.xhtml">getBuiltinFunction</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/sortArgs.xhtml">sortArgs</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/applyArguments.xhtml">applyArguments</a>()
+                    </li><li>private array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceValue.xhtml">coerceValue</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceMap.xhtml">coerceMap</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceList.xhtml">coerceList</a>()
+                    </li><li>protected array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceForExpression.xhtml">coerceForExpression</a>()
+                    </li><li>protected array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceColor.xhtml">coerceColor</a>()
+                    </li><li>protected array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceString.xhtml">coerceString</a>()
+                    </li><li>protected integer|float <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coercePercent.xhtml">coercePercent</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertMap.xhtml">assertMap</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertList.xhtml">assertList</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertColor.xhtml">assertColor</a>()
+                    </li><li>public integer|float <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertNumber.xhtml">assertNumber</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fixColor.xhtml">fixColor</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toHSL.xhtml">toHSL</a>()
+                    </li><li>private float <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hueToRGB.xhtml">hueToRGB</a>()
+                    </li><li>public array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toRGB.xhtml">toRGB</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCall.xhtml">libCall</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIf.xhtml">libIf</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIndex.xhtml">libIndex</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRgb.xhtml">libRgb</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRgba.xhtml">libRgba</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/alterColor.xhtml">alterColor</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAdjustColor.xhtml">libAdjustColor</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libChangeColor.xhtml">libChangeColor</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libScaleColor.xhtml">libScaleColor</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIeHexStr.xhtml">libIeHexStr</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRed.xhtml">libRed</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGreen.xhtml">libGreen</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libBlue.xhtml">libBlue</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAlpha.xhtml">libAlpha</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libOpacity.xhtml">libOpacity</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMix.xhtml">libMix</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHsl.xhtml">libHsl</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHsla.xhtml">libHsla</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHue.xhtml">libHue</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSaturation.xhtml">libSaturation</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLightness.xhtml">libLightness</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/adjustHsl.xhtml">adjustHsl</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAdjustHue.xhtml">libAdjustHue</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLighten.xhtml">libLighten</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libDarken.xhtml">libDarken</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSaturate.xhtml">libSaturate</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libDesaturate.xhtml">libDesaturate</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGrayscale.xhtml">libGrayscale</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libComplement.xhtml">libComplement</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libInvert.xhtml">libInvert</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libOpacify.xhtml">libOpacify</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFadeIn.xhtml">libFadeIn</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libTransparentize.xhtml">libTransparentize</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFadeOut.xhtml">libFadeOut</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnquote.xhtml">libUnquote</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libQuote.xhtml">libQuote</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libPercentage.xhtml">libPercentage</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRound.xhtml">libRound</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFloor.xhtml">libFloor</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCeil.xhtml">libCeil</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAbs.xhtml">libAbs</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMin.xhtml">libMin</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMax.xhtml">libMax</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getNormalizedNumbers.xhtml">getNormalizedNumbers</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLength.xhtml">libLength</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libListSeparator.xhtml">libListSeparator</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libNth.xhtml">libNth</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSetNth.xhtml">libSetNth</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapGet.xhtml">libMapGet</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapKeys.xhtml">libMapKeys</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapValues.xhtml">libMapValues</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapRemove.xhtml">libMapRemove</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapHasKey.xhtml">libMapHasKey</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapMerge.xhtml">libMapMerge</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libKeywords.xhtml">libKeywords</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/listSeparatorForJoin.xhtml">listSeparatorForJoin</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libJoin.xhtml">libJoin</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAppend.xhtml">libAppend</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libZip.xhtml">libZip</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libTypeOf.xhtml">libTypeOf</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnit.xhtml">libUnit</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnitless.xhtml">libUnitless</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libComparable.xhtml">libComparable</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrIndex.xhtml">libStrIndex</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrInsert.xhtml">libStrInsert</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrLength.xhtml">libStrLength</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrSlice.xhtml">libStrSlice</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libToLowerCase.xhtml">libToLowerCase</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libToUpperCase.xhtml">libToUpperCase</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFeatureExists.xhtml">libFeatureExists</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFunctionExists.xhtml">libFunctionExists</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGlobalVariableExists.xhtml">libGlobalVariableExists</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMixinExists.xhtml">libMixinExists</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libVariableExists.xhtml">libVariableExists</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCounter.xhtml">libCounter</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRandom.xhtml">libRandom</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUniqueId.xhtml">libUniqueId</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libInspect.xhtml">libInspect</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">328</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $i. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">412 - 463</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method flattenSelectors() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">473 - 515</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method matchExtends() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">525 - 585</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method matchExtendsSingle() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">525 - 585</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method matchExtendsSingle() has an NPath complexity of 385. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">711</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">781 - 856</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method spliceTree() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">781 - 856</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method spliceTree() has an NPath complexity of 6914. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">951 - 958</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method isWithout() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1132 - 1148</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method evalSelectorPart() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1164</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$key'.</td>
+            </tr>
+            <tr>
+              <td class="line">1320 - 1380</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method compileMediaQuery() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1390 - 1452</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method mergeMediaTypes() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1390 - 1452</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method mergeMediaTypes() has an NPath complexity of 2304. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">1400</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1401</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $t1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1410</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1411</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $t2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1463 - 1500</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method compileImport() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1510 - 1863</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method compileChild() has a Cyclomatic Complexity of 86. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1510 - 1863</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method compileChild() has an NPath complexity of 4360. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">1510 - 1863</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method compileChild() has 354 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">1646</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $if. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1720</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $d. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1874</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1943 - 2128</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method reduce() has a Cyclomatic Complexity of 62. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">1943 - 2128</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method reduce() has an NPath complexity of 13370. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">1943 - 2128</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method reduce() has 186 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">1949</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">1971</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$ucOpName'.</td>
+            </tr>
+            <tr>
+              <td class="line">1972</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$ucLType'.</td>
+            </tr>
+            <tr>
+              <td class="line">1973</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$ucRType'.</td>
+            </tr>
+            <tr>
+              <td class="line">1979</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $fn. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2393 - 2452</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method opColorColor() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">2393</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2463</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2484</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2600</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2636 - 2762</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method compileValue() has a Cyclomatic Complexity of 26. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">2636 - 2762</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method compileValue() has 127 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">2651</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2651</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2651</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2661</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">2978</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $e. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">3104 - 3136</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method get() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">3365</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $pi. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">3380 - 3414</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method findImport() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">3555</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">3592</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">3661 - 3779</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method applyArguments() has a Cyclomatic Complexity of 27. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">3661 - 3779</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method applyArguments() has an NPath complexity of 1512. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">3661 - 3779</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method applyArguments() has 119 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">4081</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $c. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4116</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4117</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $d. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4120</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4120</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4154</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4154</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4154</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4197</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4198</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4199</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4201</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4202</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4204</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4205</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4206</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4225</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4261</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $t. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4261</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4310</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4310</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4310</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4340</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4340</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4340</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4340</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4352 - 4393</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method alterColor() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">4352</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $fn. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4408</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$i'.</td>
+            </tr>
+            <tr>
+              <td class="line">4426</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$base'.</td>
+            </tr>
+            <tr>
+              <td class="line">4426</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$i'.</td>
+            </tr>
+            <tr>
+              <td class="line">4574</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $w. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4575</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4577</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $w1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4578</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $w2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4602</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4602</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4602</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4616</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4616</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4616</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4616</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">5043</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">5063</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">5549</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">5554 - 5556</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
+              </td>
+              <td>Avoid excessively long variable names like $libGlobalVariableExists. Keep variable name length under 20.</td>
+            </tr>
+            <tr>
+              <td class="line">5618</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">5634</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="LINE_COMMENTS">LINE_COMMENTS</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="DEBUG_INFO">DEBUG_INFO</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="WITH_RULE">WITH_RULE</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="WITH_MEDIA">WITH_MEDIA</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="WITH_SUPPORTS">WITH_SUPPORTS</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td id="WITH_ALL">WITH_ALL</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="charsetSeen">
+              <strong>$charsetSeen</strong>
+            </li>
+            <li id="commentsSeen">
+              <strong>$commentsSeen</strong>
+            </li>
+            <li id="env">
+              <strong>$env</strong>
+            </li>
+            <li id="extends">
+              <strong>$extends</strong>
+            </li>
+            <li id="extendsMap">
+              <strong>$extendsMap</strong>
+            </li>
+            <li id="ignoreErrors">
+              <strong>$ignoreErrors</strong>
+            </li>
+            <li id="indentLevel">
+              <strong>$indentLevel</strong>
+            </li>
+            <li id="parsedFiles">
+              <strong>$parsedFiles</strong>
+            </li>
+            <li id="parser">
+              <strong>$parser</strong>
+            </li>
+            <li id="scope">
+              <strong>$scope</strong>
+            </li>
+            <li id="shouldEvaluate">
+              <strong>$shouldEvaluate</strong>
+            </li>
+            <li id="sourceColumn">
+              <strong>$sourceColumn</strong>
+            </li>
+            <li id="sourceIndex">
+              <strong>$sourceIndex</strong>
+            </li>
+            <li id="sourceLine">
+              <strong>$sourceLine</strong>
+            </li>
+            <li id="sourceNames">
+              <strong>$sourceNames</strong>
+            </li>
+            <li id="stderr">
+              <strong>$stderr</strong>
+            </li>
+            <li id="storeEnv">
+              <strong>$storeEnv</strong>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="encoding">
+              <strong>$encoding</strong>
+            </li>
+            <li id="formatter">
+              <strong>$formatter</strong>
+            </li>
+            <li id="importCache">
+              <strong>$importCache</strong>
+            </li>
+            <li id="importPaths">
+              <strong>$importPaths</strong>
+            </li>
+            <li id="importedFiles">
+              <strong>$importedFiles</strong>
+            </li>
+            <li id="libAbs">
+              <strong>$libAbs</strong>
+            </li>
+            <li id="libAdjustColor">
+              <strong>$libAdjustColor</strong>
+            </li>
+            <li id="libAdjustHue">
+              <strong>$libAdjustHue</strong>
+            </li>
+            <li id="libAlpha">
+              <strong>$libAlpha</strong>
+            </li>
+            <li id="libAppend">
+              <strong>$libAppend</strong>
+            </li>
+            <li id="libBlue">
+              <strong>$libBlue</strong>
+            </li>
+            <li id="libCeil">
+              <strong>$libCeil</strong>
+            </li>
+            <li id="libChangeColor">
+              <strong>$libChangeColor</strong>
+            </li>
+            <li id="libComparable">
+              <strong>$libComparable</strong>
+            </li>
+            <li id="libComplement">
+              <strong>$libComplement</strong>
+            </li>
+            <li id="libDarken">
+              <strong>$libDarken</strong>
+            </li>
+            <li id="libDesaturate">
+              <strong>$libDesaturate</strong>
+            </li>
+            <li id="libFadeIn">
+              <strong>$libFadeIn</strong>
+            </li>
+            <li id="libFadeOut">
+              <strong>$libFadeOut</strong>
+            </li>
+            <li id="libFeatureExists">
+              <strong>$libFeatureExists</strong>
+            </li>
+            <li id="libFloor">
+              <strong>$libFloor</strong>
+            </li>
+            <li id="libFunctionExists">
+              <strong>$libFunctionExists</strong>
+            </li>
+            <li id="libGlobalVariableExists">
+              <strong>$libGlobalVariableExists</strong>
+            </li>
+            <li id="libGrayscale">
+              <strong>$libGrayscale</strong>
+            </li>
+            <li id="libGreen">
+              <strong>$libGreen</strong>
+            </li>
+            <li id="libHsl">
+              <strong>$libHsl</strong>
+            </li>
+            <li id="libHsla">
+              <strong>$libHsla</strong>
+            </li>
+            <li id="libHue">
+              <strong>$libHue</strong>
+            </li>
+            <li id="libIeHexStr">
+              <strong>$libIeHexStr</strong>
+            </li>
+            <li id="libIf">
+              <strong>$libIf</strong>
+            </li>
+            <li id="libIndex">
+              <strong>$libIndex</strong>
+            </li>
+            <li id="libInspect">
+              <strong>$libInspect</strong>
+            </li>
+            <li id="libInvert">
+              <strong>$libInvert</strong>
+            </li>
+            <li id="libJoin">
+              <strong>$libJoin</strong>
+            </li>
+            <li id="libKeywords">
+              <strong>$libKeywords</strong>
+            </li>
+            <li id="libLength">
+              <strong>$libLength</strong>
+            </li>
+            <li id="libLighten">
+              <strong>$libLighten</strong>
+            </li>
+            <li id="libLightness">
+              <strong>$libLightness</strong>
+            </li>
+            <li id="libMapGet">
+              <strong>$libMapGet</strong>
+            </li>
+            <li id="libMapHasKey">
+              <strong>$libMapHasKey</strong>
+            </li>
+            <li id="libMapKeys">
+              <strong>$libMapKeys</strong>
+            </li>
+            <li id="libMapMerge">
+              <strong>$libMapMerge</strong>
+            </li>
+            <li id="libMapRemove">
+              <strong>$libMapRemove</strong>
+            </li>
+            <li id="libMapValues">
+              <strong>$libMapValues</strong>
+            </li>
+            <li id="libMix">
+              <strong>$libMix</strong>
+            </li>
+            <li id="libMixinExists">
+              <strong>$libMixinExists</strong>
+            </li>
+            <li id="libNth">
+              <strong>$libNth</strong>
+            </li>
+            <li id="libOpacify">
+              <strong>$libOpacify</strong>
+            </li>
+            <li id="libOpacity">
+              <strong>$libOpacity</strong>
+            </li>
+            <li id="libPercentage">
+              <strong>$libPercentage</strong>
+            </li>
+            <li id="libQuote">
+              <strong>$libQuote</strong>
+            </li>
+            <li id="libRandom">
+              <strong>$libRandom</strong>
+            </li>
+            <li id="libRed">
+              <strong>$libRed</strong>
+            </li>
+            <li id="libRgb">
+              <strong>$libRgb</strong>
+            </li>
+            <li id="libRgba">
+              <strong>$libRgba</strong>
+            </li>
+            <li id="libRound">
+              <strong>$libRound</strong>
+            </li>
+            <li id="libSaturate">
+              <strong>$libSaturate</strong>
+            </li>
+            <li id="libSaturation">
+              <strong>$libSaturation</strong>
+            </li>
+            <li id="libScaleColor">
+              <strong>$libScaleColor</strong>
+            </li>
+            <li id="libSetNth">
+              <strong>$libSetNth</strong>
+            </li>
+            <li id="libStrIndex">
+              <strong>$libStrIndex</strong>
+            </li>
+            <li id="libStrInsert">
+              <strong>$libStrInsert</strong>
+            </li>
+            <li id="libStrLength">
+              <strong>$libStrLength</strong>
+            </li>
+            <li id="libStrSlice">
+              <strong>$libStrSlice</strong>
+            </li>
+            <li id="libToLowerCase">
+              <strong>$libToLowerCase</strong>
+            </li>
+            <li id="libToUpperCase">
+              <strong>$libToUpperCase</strong>
+            </li>
+            <li id="libTransparentize">
+              <strong>$libTransparentize</strong>
+            </li>
+            <li id="libTypeOf">
+              <strong>$libTypeOf</strong>
+            </li>
+            <li id="libUnit">
+              <strong>$libUnit</strong>
+            </li>
+            <li id="libUnitless">
+              <strong>$libUnitless</strong>
+            </li>
+            <li id="libUnquote">
+              <strong>$libUnquote</strong>
+            </li>
+            <li id="libVariableExists">
+              <strong>$libVariableExists</strong>
+            </li>
+            <li id="lineNumberStyle">
+              <strong>$lineNumberStyle</strong>
+            </li>
+            <li id="namespaces"><strong>$namespaces</strong>
+                —
+                array</li>
+            <li id="operatorNames"><strong>$operatorNames</strong>
+                —
+                array</li>
+            <li id="registeredFeatures">
+              <strong>$registeredFeatures</strong>
+            </li>
+            <li id="registeredVars">
+              <strong>$registeredVars</strong>
+            </li>
+            <li id="rootBlock">
+              <strong>$rootBlock</strong>
+            </li>
+            <li id="rootEnv">
+              <strong>$rootEnv</strong>
+            </li>
+            <li id="userFunctions">
+              <strong>$userFunctions</strong>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="defaultValue">
+              <strong>$defaultValue</strong>
+            </li>
+            <li id="emptyList">
+              <strong>$emptyList</strong>
+            </li>
+            <li id="emptyMap">
+              <strong>$emptyMap</strong>
+            </li>
+            <li id="emptyString">
+              <strong>$emptyString</strong>
+            </li>
+            <li id="false">
+              <strong>$false</strong>
+            </li>
+            <li id="null">
+              <strong>$null</strong>
+            </li>
+            <li id="nullString">
+              <strong>$nullString</strong>
+            </li>
+            <li id="selfSelector">
+              <strong>$selfSelector</strong>
+            </li>
+            <li id="true">
+              <strong>$true</strong>
+            </li>
+            <li id="with">
+              <strong>$with</strong>
+            </li>
+            <li id="without">
+              <strong>$without</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="coerceValue"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceValue.xhtml">coerceValue()</a>
+                — Coerce a php value into a scss one</li>
+            <li id="compactEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compactEnv.xhtml">compactEnv()</a>
+                — Convert env linked list to stack</li>
+            <li id="compileWith"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileWith.xhtml">compileWith()</a>
+                — Compile @at-root's with: inclusion / without: exclusion into filter flags</li>
+            <li id="extractEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractEnv.xhtml">extractEnv()</a>
+                — Convert env stack to singly linked list</li>
+            <li id="filterWithout"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/filterWithout.xhtml">filterWithout()</a>
+                — Filter env stack</li>
+            <li id="fncall"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fncall.xhtml">fncall()</a>
+                — Function caller</li>
+            <li id="handleImportLoop"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop()</a>
+                — Handle import loop</li>
+            <li id="hueToRGB"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hueToRGB.xhtml">hueToRGB()</a>
+                — Hue to RGB helper</li>
+            <li id="isWithout"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isWithout.xhtml">isWithout()</a>
+                — Filter WITH rules</li>
+            <li id="parserFactory"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory()</a>
+                — Instantiate parser</li>
+            <li id="spliceTree"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/spliceTree.xhtml">spliceTree()</a>
+                — Splice parse tree</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="adjustHsl">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/adjustHsl.xhtml">adjustHsl()</a>
+            </li>
+            <li id="alterColor">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/alterColor.xhtml">alterColor()</a>
+            </li>
+            <li id="applyArguments"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/applyArguments.xhtml">applyArguments()</a>
+                — Apply argument values per definition</li>
+            <li id="callNativeFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callNativeFunction.xhtml">callNativeFunction()</a>
+                — Call built-in and registered (PHP) functions</li>
+            <li id="callScssFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callScssFunction.xhtml">callScssFunction()</a>
+                — Call SCSS @function</li>
+            <li id="coerceColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceColor.xhtml">coerceColor()</a>
+                — Coerce value to color</li>
+            <li id="coerceForExpression"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceForExpression.xhtml">coerceForExpression()</a>
+                — Coerce color for expression</li>
+            <li id="coerceList"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceList.xhtml">coerceList()</a>
+                — Coerce something to list</li>
+            <li id="coerceMap"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceMap.xhtml">coerceMap()</a>
+                — Coerce something to map</li>
+            <li id="coercePercent"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coercePercent.xhtml">coercePercent()</a>
+                — Coerce value to a percentage</li>
+            <li id="coerceString"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/coerceString.xhtml">coerceString()</a>
+                — Coerce value to string</li>
+            <li id="collapseSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/collapseSelectors.xhtml">collapseSelectors()</a>
+                — Collapse selectors</li>
+            <li id="combineSelectorSingle"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/combineSelectorSingle.xhtml">combineSelectorSingle()</a>
+                — Combine selector single</li>
+            <li id="compileAtRoot"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileAtRoot.xhtml">compileAtRoot()</a>
+                — Compile at-root</li>
+            <li id="compileBlock"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileBlock.xhtml">compileBlock()</a>
+                — Recursively compiles a block.</li>
+            <li id="compileChild"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChild.xhtml">compileChild()</a>
+                — Compile child; returns a value to halt execution</li>
+            <li id="compileChildren"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildren.xhtml">compileChildren()</a>
+                — Compile children and return result</li>
+            <li id="compileChildrenNoReturn"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildrenNoReturn.xhtml">compileChildrenNoReturn()</a>
+                — Compile children and throw exception if unexpected @return</li>
+            <li id="compileComment"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileComment.xhtml">compileComment()</a>
+                — Compile root level comment</li>
+            <li id="compileDirective"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileDirective.xhtml">compileDirective()</a>
+                — Compile directive</li>
+            <li id="compileImport"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileImport.xhtml">compileImport()</a>
+                — Compile import; returns true if the value was something that could be imported</li>
+            <li id="compileKeyframeBlock"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileKeyframeBlock.xhtml">compileKeyframeBlock()</a>
+                — Compile keyframe block</li>
+            <li id="compileMedia"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMedia.xhtml">compileMedia()</a>
+                — Compile media</li>
+            <li id="compileMediaQuery"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMediaQuery.xhtml">compileMediaQuery()</a>
+                — Compile media query</li>
+            <li id="compileNestedBlock"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileNestedBlock.xhtml">compileNestedBlock()</a>
+                — Compile nested block</li>
+            <li id="compileRoot"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileRoot.xhtml">compileRoot()</a>
+                — Compile root</li>
+            <li id="compileSelector"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileSelector.xhtml">compileSelector()</a>
+                — Compile selector to string; self(&amp;) should have been replaced by now</li>
+            <li id="compileSelectorPart"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileSelectorPart.xhtml">compileSelectorPart()</a>
+                — Compile selector part</li>
+            <li id="compileStringContent"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileStringContent.xhtml">compileStringContent()</a>
+                — Compile string content</li>
+            <li id="evalSelector"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelector.xhtml">evalSelector()</a>
+                — Evaluate selector</li>
+            <li id="evalSelectorPart"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelectorPart.xhtml">evalSelectorPart()</a>
+                — Evaluate selector part; replaces all the interpolates, stripping quotes</li>
+            <li id="evalSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/evalSelectors.xhtml">evalSelectors()</a>
+                — Evaluate selectors</li>
+            <li id="expToString"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/expToString.xhtml">expToString()</a>
+                — Reduce expression to string</li>
+            <li id="extractInterpolation"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractInterpolation.xhtml">extractInterpolation()</a>
+                — Extract interpolation; it doesn't need to be recursive, compileValue will handle that</li>
+            <li id="fileExists"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fileExists.xhtml">fileExists()</a>
+                — Does file exist?</li>
+            <li id="fixColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fixColor.xhtml">fixColor()</a>
+                — Make sure a color's components don't go out of bounds</li>
+            <li id="flattenList"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenList.xhtml">flattenList()</a>
+                — Flatten list</li>
+            <li id="flattenSelectorSingle"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectorSingle.xhtml">flattenSelectorSingle()</a>
+                — Flatten selector single; joins together .</li>
+            <li id="flattenSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectors.xhtml">flattenSelectors()</a>
+                — Flatten selectors</li>
+            <li id="getBuiltinFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getBuiltinFunction.xhtml">getBuiltinFunction()</a>
+                — Get built-in function</li>
+            <li id="getNormalizedNumbers"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getNormalizedNumbers.xhtml">getNormalizedNumbers()</a>
+                — Helper to normalize args containing numbers</li>
+            <li id="getStoreEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getStoreEnv.xhtml">getStoreEnv()</a>
+                — Get store environment</li>
+            <li id="has"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/has.xhtml">has()</a>
+                — Has variable?</li>
+            <li id="hasSelectorPlaceholder"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hasSelectorPlaceholder.xhtml">hasSelectorPlaceholder()</a>
+                — Has selector placeholder?</li>
+            <li id="importFile"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/importFile.xhtml">importFile()</a>
+                — Import file</li>
+            <li id="injectVariables"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/injectVariables.xhtml">injectVariables()</a>
+                — Inject variables</li>
+            <li id="isSelfExtend"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isSelfExtend.xhtml">isSelfExtend()</a>
+                — Is self extend?</li>
+            <li id="isTruthy"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isTruthy.xhtml">isTruthy()</a>
+                — Is truthy?</li>
+            <li id="joinSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/joinSelectors.xhtml">joinSelectors()</a>
+                — Join selectors; looks for &amp; to replace, or append parent before child</li>
+            <li id="libAbs">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAbs.xhtml">libAbs()</a>
+            </li>
+            <li id="libAdjustColor">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAdjustColor.xhtml">libAdjustColor()</a>
+            </li>
+            <li id="libAdjustHue">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAdjustHue.xhtml">libAdjustHue()</a>
+            </li>
+            <li id="libAlpha">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAlpha.xhtml">libAlpha()</a>
+            </li>
+            <li id="libAppend">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libAppend.xhtml">libAppend()</a>
+            </li>
+            <li id="libBlue">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libBlue.xhtml">libBlue()</a>
+            </li>
+            <li id="libCall">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCall.xhtml">libCall()</a>
+            </li>
+            <li id="libCeil">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCeil.xhtml">libCeil()</a>
+            </li>
+            <li id="libChangeColor">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libChangeColor.xhtml">libChangeColor()</a>
+            </li>
+            <li id="libComparable">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libComparable.xhtml">libComparable()</a>
+            </li>
+            <li id="libComplement">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libComplement.xhtml">libComplement()</a>
+            </li>
+            <li id="libCounter"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libCounter.xhtml">libCounter()</a>
+                — Workaround IE7's content counter bug.</li>
+            <li id="libDarken">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libDarken.xhtml">libDarken()</a>
+            </li>
+            <li id="libDesaturate">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libDesaturate.xhtml">libDesaturate()</a>
+            </li>
+            <li id="libFadeIn">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFadeIn.xhtml">libFadeIn()</a>
+            </li>
+            <li id="libFadeOut">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFadeOut.xhtml">libFadeOut()</a>
+            </li>
+            <li id="libFeatureExists">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFeatureExists.xhtml">libFeatureExists()</a>
+            </li>
+            <li id="libFloor">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFloor.xhtml">libFloor()</a>
+            </li>
+            <li id="libFunctionExists">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libFunctionExists.xhtml">libFunctionExists()</a>
+            </li>
+            <li id="libGlobalVariableExists">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGlobalVariableExists.xhtml">libGlobalVariableExists()</a>
+            </li>
+            <li id="libGrayscale">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGrayscale.xhtml">libGrayscale()</a>
+            </li>
+            <li id="libGreen">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libGreen.xhtml">libGreen()</a>
+            </li>
+            <li id="libHsl">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHsl.xhtml">libHsl()</a>
+            </li>
+            <li id="libHsla">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHsla.xhtml">libHsla()</a>
+            </li>
+            <li id="libHue">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libHue.xhtml">libHue()</a>
+            </li>
+            <li id="libIeHexStr">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIeHexStr.xhtml">libIeHexStr()</a>
+            </li>
+            <li id="libIf">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIf.xhtml">libIf()</a>
+            </li>
+            <li id="libIndex">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libIndex.xhtml">libIndex()</a>
+            </li>
+            <li id="libInspect">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libInspect.xhtml">libInspect()</a>
+            </li>
+            <li id="libInvert">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libInvert.xhtml">libInvert()</a>
+            </li>
+            <li id="libJoin">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libJoin.xhtml">libJoin()</a>
+            </li>
+            <li id="libKeywords">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libKeywords.xhtml">libKeywords()</a>
+            </li>
+            <li id="libLength">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLength.xhtml">libLength()</a>
+            </li>
+            <li id="libLighten">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLighten.xhtml">libLighten()</a>
+            </li>
+            <li id="libLightness">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libLightness.xhtml">libLightness()</a>
+            </li>
+            <li id="libListSeparator">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libListSeparator.xhtml">libListSeparator()</a>
+            </li>
+            <li id="libMapGet">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapGet.xhtml">libMapGet()</a>
+            </li>
+            <li id="libMapHasKey">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapHasKey.xhtml">libMapHasKey()</a>
+            </li>
+            <li id="libMapKeys">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapKeys.xhtml">libMapKeys()</a>
+            </li>
+            <li id="libMapMerge">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapMerge.xhtml">libMapMerge()</a>
+            </li>
+            <li id="libMapRemove">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapRemove.xhtml">libMapRemove()</a>
+            </li>
+            <li id="libMapValues">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMapValues.xhtml">libMapValues()</a>
+            </li>
+            <li id="libMax">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMax.xhtml">libMax()</a>
+            </li>
+            <li id="libMin">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMin.xhtml">libMin()</a>
+            </li>
+            <li id="libMix">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMix.xhtml">libMix()</a>
+            </li>
+            <li id="libMixinExists">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libMixinExists.xhtml">libMixinExists()</a>
+            </li>
+            <li id="libNth">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libNth.xhtml">libNth()</a>
+            </li>
+            <li id="libOpacify">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libOpacify.xhtml">libOpacify()</a>
+            </li>
+            <li id="libOpacity">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libOpacity.xhtml">libOpacity()</a>
+            </li>
+            <li id="libPercentage">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libPercentage.xhtml">libPercentage()</a>
+            </li>
+            <li id="libQuote">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libQuote.xhtml">libQuote()</a>
+            </li>
+            <li id="libRandom">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRandom.xhtml">libRandom()</a>
+            </li>
+            <li id="libRed">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRed.xhtml">libRed()</a>
+            </li>
+            <li id="libRgb">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRgb.xhtml">libRgb()</a>
+            </li>
+            <li id="libRgba">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRgba.xhtml">libRgba()</a>
+            </li>
+            <li id="libRound">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libRound.xhtml">libRound()</a>
+            </li>
+            <li id="libSaturate">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSaturate.xhtml">libSaturate()</a>
+            </li>
+            <li id="libSaturation">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSaturation.xhtml">libSaturation()</a>
+            </li>
+            <li id="libScaleColor">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libScaleColor.xhtml">libScaleColor()</a>
+            </li>
+            <li id="libSetNth">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libSetNth.xhtml">libSetNth()</a>
+            </li>
+            <li id="libStrIndex">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrIndex.xhtml">libStrIndex()</a>
+            </li>
+            <li id="libStrInsert">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrInsert.xhtml">libStrInsert()</a>
+            </li>
+            <li id="libStrLength">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrLength.xhtml">libStrLength()</a>
+            </li>
+            <li id="libStrSlice">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libStrSlice.xhtml">libStrSlice()</a>
+            </li>
+            <li id="libToLowerCase">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libToLowerCase.xhtml">libToLowerCase()</a>
+            </li>
+            <li id="libToUpperCase">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libToUpperCase.xhtml">libToUpperCase()</a>
+            </li>
+            <li id="libTransparentize">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libTransparentize.xhtml">libTransparentize()</a>
+            </li>
+            <li id="libTypeOf">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libTypeOf.xhtml">libTypeOf()</a>
+            </li>
+            <li id="libUniqueId">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUniqueId.xhtml">libUniqueId()</a>
+            </li>
+            <li id="libUnit">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnit.xhtml">libUnit()</a>
+            </li>
+            <li id="libUnitless">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnitless.xhtml">libUnitless()</a>
+            </li>
+            <li id="libUnquote">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libUnquote.xhtml">libUnquote()</a>
+            </li>
+            <li id="libVariableExists">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libVariableExists.xhtml">libVariableExists()</a>
+            </li>
+            <li id="libZip">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/libZip.xhtml">libZip()</a>
+            </li>
+            <li id="listSeparatorForJoin">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/listSeparatorForJoin.xhtml">listSeparatorForJoin()</a>
+            </li>
+            <li id="makeOutputBlock"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/makeOutputBlock.xhtml">makeOutputBlock()</a>
+                — Make output block</li>
+            <li id="matchExtends"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtends.xhtml">matchExtends()</a>
+                — Match extends</li>
+            <li id="matchExtendsSingle"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtendsSingle.xhtml">matchExtendsSingle()</a>
+                — Match extends single</li>
+            <li id="mediaParent"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mediaParent.xhtml">mediaParent()</a>
+                — Media parent</li>
+            <li id="mergeMediaTypes"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeMediaTypes.xhtml">mergeMediaTypes()</a>
+                — Merge media types</li>
+            <li id="missingSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/missingSelectors.xhtml">missingSelectors()</a>
+                — Report missing selectors</li>
+            <li id="multiplyMedia"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/multiplyMedia.xhtml">multiplyMedia()</a>
+                — Multiply media</li>
+            <li id="multiplySelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/multiplySelectors.xhtml">multiplySelectors()</a>
+                — Find the final set of selectors</li>
+            <li id="normalizeName"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/normalizeName.xhtml">normalizeName()</a>
+                — Normalize name</li>
+            <li id="opAdd"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAdd.xhtml">opAdd()</a>
+                — Add strings</li>
+            <li id="opAddNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAddNumberNumber.xhtml">opAddNumberNumber()</a>
+                — Add numbers</li>
+            <li id="opAnd"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opAnd.xhtml">opAnd()</a>
+                — Boolean and</li>
+            <li id="opCmpNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opCmpNumberNumber.xhtml">opCmpNumberNumber()</a>
+                — Three-way comparison, aka spaceship operator</li>
+            <li id="opColorColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opColorColor.xhtml">opColorColor()</a>
+                — Compare colors</li>
+            <li id="opColorNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opColorNumber.xhtml">opColorNumber()</a>
+                — Compare color and number</li>
+            <li id="opDivNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opDivNumberNumber.xhtml">opDivNumberNumber()</a>
+                — Divide numbers</li>
+            <li id="opEq"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opEq.xhtml">opEq()</a>
+                — Compare number1 == number2</li>
+            <li id="opGtNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opGtNumberNumber.xhtml">opGtNumberNumber()</a>
+                — Compare number1 &gt; number2</li>
+            <li id="opGteNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opGteNumberNumber.xhtml">opGteNumberNumber()</a>
+                — Compare number1 &gt;= number2</li>
+            <li id="opLtNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opLtNumberNumber.xhtml">opLtNumberNumber()</a>
+                — Compare number1 &lt; number2</li>
+            <li id="opLteNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opLteNumberNumber.xhtml">opLteNumberNumber()</a>
+                — Compare number1 &lt;= number2</li>
+            <li id="opModNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opModNumberNumber.xhtml">opModNumberNumber()</a>
+                — Mod numbers</li>
+            <li id="opMulNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opMulNumberNumber.xhtml">opMulNumberNumber()</a>
+                — Multiply numbers</li>
+            <li id="opNeq"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opNeq.xhtml">opNeq()</a>
+                — Compare number1 != number2</li>
+            <li id="opNumberColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opNumberColor.xhtml">opNumberColor()</a>
+                — Compare number and color</li>
+            <li id="opOr"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opOr.xhtml">opOr()</a>
+                — Boolean or</li>
+            <li id="opSubNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opSubNumberNumber.xhtml">opSubNumberNumber()</a>
+                — Subtract numbers</li>
+            <li id="popEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/popEnv.xhtml">popEnv()</a>
+                — Pop environment</li>
+            <li id="pushEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushEnv.xhtml">pushEnv()</a>
+                — Push environment</li>
+            <li id="pushExtends"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushExtends.xhtml">pushExtends()</a>
+                — Push extends</li>
+            <li id="reduce"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/reduce.xhtml">reduce()</a>
+                — Reduce value</li>
+            <li id="set"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/set.xhtml">set()</a>
+                — Set variable</li>
+            <li id="setExisting"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setExisting.xhtml">setExisting()</a>
+                — Set existing variable</li>
+            <li id="setRaw"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setRaw.xhtml">setRaw()</a>
+                — Set raw variable</li>
+            <li id="shouldEval"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/shouldEval.xhtml">shouldEval()</a>
+                — Should $value cause its operand to eval</li>
+            <li id="sortArgs"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/sortArgs.xhtml">sortArgs()</a>
+                — Sorts keyword arguments</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="addFeature"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addFeature.xhtml">addFeature()</a>
+                — Add feature</li>
+            <li id="addImportPath"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addImportPath.xhtml">addImportPath()</a>
+                — Add import path</li>
+            <li id="addParsedFile"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/addParsedFile.xhtml">addParsedFile()</a>
+                — Adds to list of parsed files</li>
+            <li id="assertColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertColor.xhtml">assertColor()</a>
+                — Assert value is a color</li>
+            <li id="assertList"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertList.xhtml">assertList()</a>
+                — Assert value is a list</li>
+            <li id="assertMap"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertMap.xhtml">assertMap()</a>
+                — Assert value is a map</li>
+            <li id="assertNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/assertNumber.xhtml">assertNumber()</a>
+                — Assert value is a number</li>
+            <li id="compile"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compile.xhtml">compile()</a>
+                — Compile scss</li>
+            <li id="compileValue"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileValue.xhtml">compileValue()</a>
+                — Compiles a primitive value into a CSS property value.</li>
+            <li id="findImport"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/findImport.xhtml">findImport()</a>
+                — Return the file path for an import url if it exists</li>
+            <li id="get"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/get.xhtml">get()</a>
+                — Get variable</li>
+            <li id="getParsedFiles"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getParsedFiles.xhtml">getParsedFiles()</a>
+                — Returns list of parsed files</li>
+            <li id="getVariables"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getVariables.xhtml">getVariables()</a>
+                — Returns list of variables</li>
+            <li id="normalizeValue"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/normalizeValue.xhtml">normalizeValue()</a>
+                — Normalize value</li>
+            <li id="registerFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/registerFunction.xhtml">registerFunction()</a>
+                — Register function</li>
+            <li id="setEncoding"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setEncoding.xhtml">setEncoding()</a>
+                — Set encoding</li>
+            <li id="setFormatter"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setFormatter.xhtml">setFormatter()</a>
+                — Set formatter</li>
+            <li id="setIgnoreErrors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setIgnoreErrors.xhtml">setIgnoreErrors()</a>
+                — Ignore errors?</li>
+            <li id="setImportPaths"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setImportPaths.xhtml">setImportPaths()</a>
+                — Set import paths</li>
+            <li id="setLineNumberStyle"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setLineNumberStyle.xhtml">setLineNumberStyle()</a>
+                — Set line number style</li>
+            <li id="setNumberPrecision"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setNumberPrecision.xhtml">setNumberPrecision()</a>
+                — Set number precision</li>
+            <li id="setVariables"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setVariables.xhtml">setVariables()</a>
+                — Set variables</li>
+            <li id="throwError"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/throwError.xhtml">throwError()</a>
+                — Throw error (exception)</li>
+            <li id="toBool"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toBool.xhtml">toBool()</a>
+                — Cast to boolean</li>
+            <li id="toHSL"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toHSL.xhtml">toHSL()</a>
+                — Convert RGB to HSL</li>
+            <li id="toRGB"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/toRGB.xhtml">toRGB()</a>
+                — Convert HSL to RGB</li>
+            <li id="unregisterFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/unregisterFunction.xhtml">unregisterFunction()</a>
+                — Unregister function</li>
+            <li id="unsetVariable"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/unsetVariable.xhtml">unsetVariable()</a>
+                — Unset variable</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-02T12:09:45+00:00 (commit #<span title="80007ffa3d809662d54915ee053689a341000910">80007ff</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Added advertizing.
+Added SCSS processor.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - GB_Object_Cache::get</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="GB_Object_Cache" href="../../classes/GB_Object_Cache.xhtml">GB_Object_Cache</a>
+          </li>
+          <li class="separator">get</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/gb/class.gb-object-cache.php.xhtml#line213">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>GB_Object_Cache::</small>get</h1>
+        <h4>Retrieves the cache contents, if it exists</h4>
+        <p>The contents will be first attempted to be retrieved by searching by the
+key in the cache group. If the cache is hit (success) then the contents
+are returned.
+
+On failure, the number of cache misses will be incremented.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function get(<a title="int|string" href="../../classes/int|string.xhtml">int|string</a>
+        $key,
+            [string
+        $group = '',
+            [boolean
+        $force = false,
+            [&amp;
+        $found = null]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$key</code>
+                —
+                object</dt>
+          <dd><br/>What the contents in the cache are called</dd>
+          <dt><code>$group</code>
+                —
+                string</dt>
+          <dd><br/>Where the cache contents are grouped</dd>
+          <dt><code>$force</code>
+                —
+                boolean</dt>
+          <dd><br/>Whether to force a refetch rather than relying on the local cache (default is false)</dd>
+          <dt><code>$found</code>
+                —
+                </dt>
+          <dd/>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>bool|mixed</dt>
+          <dd>False on failure to retrieve contents or the cache<br/>contents on success</dd>
+        </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">213</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$force'.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

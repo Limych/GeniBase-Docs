@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Hooks</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Hooks</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-hooks.php.xhtml#line35">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Hooks</h1>
+        <h4>GeniBase Hooks API class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Hooks
+            {<br/><ul class="none"><li>// members</li><li>public static array <a href="#members">$filters</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$actions</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$merged_filters</a> =
+                        ;
+                    </li><li>public static array <a href="#members">$current_filter</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static void <a title="GB_Hooks" href="../classes/GB_Hooks/_call_all_hook.xhtml">_call_all_hook</a>()
+                    </li><li>public static string|bool <a title="GB_Hooks" href="../classes/GB_Hooks/_build_unique_id.xhtml">_build_unique_id</a>()
+                    </li><li>public static boolean <a title="GB_Hooks" href="../classes/GB_Hooks/add_filter.xhtml">add_filter</a>()
+                    </li><li>public static bool|int <a title="GB_Hooks" href="../classes/GB_Hooks/has_filter.xhtml">has_filter</a>()
+                    </li><li>public static mixed <a title="GB_Hooks" href="../classes/GB_Hooks/apply_filters.xhtml">apply_filters</a>()
+                    </li><li>public static mixed <a title="GB_Hooks" href="../classes/GB_Hooks/apply_filters_ref_array.xhtml">apply_filters_ref_array</a>()
+                    </li><li>public static boolean <a title="GB_Hooks" href="../classes/GB_Hooks/remove_filter.xhtml">remove_filter</a>()
+                    </li><li>public static bool <a title="GB_Hooks" href="../classes/GB_Hooks/remove_all_filters.xhtml">remove_all_filters</a>()
+                    </li><li>public static string <a title="GB_Hooks" href="../classes/GB_Hooks/current_filter.xhtml">current_filter</a>()
+                    </li><li>public static string <a title="GB_Hooks" href="../classes/GB_Hooks/current_action.xhtml">current_action</a>()
+                    </li><li>public static bool <a title="GB_Hooks" href="../classes/GB_Hooks/doing_filter.xhtml">doing_filter</a>()
+                    </li><li>public static bool <a title="GB_Hooks" href="../classes/GB_Hooks/doing_action.xhtml">doing_action</a>()
+                    </li><li>public static bool <a title="GB_Hooks" href="../classes/GB_Hooks/add_action.xhtml">add_action</a>()
+                    </li><li>public static null <a title="GB_Hooks" href="../classes/GB_Hooks/do_action.xhtml">do_action</a>()
+                    </li><li>public static int <a title="GB_Hooks" href="../classes/GB_Hooks/did_action.xhtml">did_action</a>()
+                    </li><li>public static null <a title="GB_Hooks" href="../classes/GB_Hooks/do_action_ref_array.xhtml">do_action_ref_array</a>()
+                    </li><li>public static bool|int <a title="GB_Hooks" href="../classes/GB_Hooks/has_action.xhtml">has_action</a>()
+                    </li><li>public static boolean <a title="GB_Hooks" href="../classes/GB_Hooks/remove_action.xhtml">remove_action</a>()
+                    </li><li>public static bool <a title="GB_Hooks" href="../classes/GB_Hooks/remove_all_actions.xhtml">remove_all_actions</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">233 - 267</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method has_filter() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">304 - 346</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method apply_filters() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">424</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">582 - 628</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method do_action() has a Cyclomatic Complexity of 15. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">582 - 628</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method do_action() has an NPath complexity of 1920. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">661 - 699</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method do_action_ref_array() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="actions">
+              <strong>$actions</strong>
+              <br/>
+              <span class="indent">Increments the amount of times action was triggered.</span>
+            </li>
+            <li id="current_filter">
+              <strong>$current_filter</strong>
+              <br/>
+              <span class="indent">Stores the list of current filters with the current one last.</span>
+            </li>
+            <li id="filters">
+              <strong>$filters</strong>
+              <br/>
+              <span class="indent">A multidimensional array of all hooks and the callbacks hooked to them.</span>
+            </li>
+            <li id="merged_filters">
+              <strong>$merged_filters</strong>
+              <br/>
+              <span class="indent">Tracks the tags that need to be merged for later.</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="_build_unique_id"><a title="GB_Hooks" href="../classes/GB_Hooks/_build_unique_id.xhtml">_build_unique_id()</a>
+                — Build Unique ID for storage and retrieval.</li>
+            <li id="_call_all_hook"><a title="GB_Hooks" href="../classes/GB_Hooks/_call_all_hook.xhtml">_call_all_hook()</a>
+                — Call the 'all' hook, which will process the functions hooked into it.</li>
+            <li id="add_action"><a title="GB_Hooks" href="../classes/GB_Hooks/add_action.xhtml">add_action()</a>
+                — Hooks a function on to a specific action.</li>
+            <li id="add_filter"><a title="GB_Hooks" href="../classes/GB_Hooks/add_filter.xhtml">add_filter()</a>
+                — Hook a function or method to a specific filter action.</li>
+            <li id="apply_filters"><a title="GB_Hooks" href="../classes/GB_Hooks/apply_filters.xhtml">apply_filters()</a>
+                — Call the functions added to a filter hook.</li>
+            <li id="apply_filters_ref_array"><a title="GB_Hooks" href="../classes/GB_Hooks/apply_filters_ref_array.xhtml">apply_filters_ref_array()</a>
+                — Execute functions hooked on a specific filter hook, specifying arguments in an array.</li>
+            <li id="current_action"><a title="GB_Hooks" href="../classes/GB_Hooks/current_action.xhtml">current_action()</a>
+                — Retrieve the name of the current action.</li>
+            <li id="current_filter"><a title="GB_Hooks" href="../classes/GB_Hooks/current_filter.xhtml">current_filter()</a>
+                — Retrieve the name of the current filter or action.</li>
+            <li id="did_action"><a title="GB_Hooks" href="../classes/GB_Hooks/did_action.xhtml">did_action()</a>
+                — Retrieve the number of times an action is fired.</li>
+            <li id="do_action"><a title="GB_Hooks" href="../classes/GB_Hooks/do_action.xhtml">do_action()</a>
+                — Execute functions hooked on a specific action hook.</li>
+            <li id="do_action_ref_array"><a title="GB_Hooks" href="../classes/GB_Hooks/do_action_ref_array.xhtml">do_action_ref_array()</a>
+                — Execute functions hooked on a specific action hook, specifying arguments in an array.</li>
+            <li id="doing_action"><a title="GB_Hooks" href="../classes/GB_Hooks/doing_action.xhtml">doing_action()</a>
+                — Retrieve the name of an action currently being processed.</li>
+            <li id="doing_filter"><a title="GB_Hooks" href="../classes/GB_Hooks/doing_filter.xhtml">doing_filter()</a>
+                — Retrieve the name of a filter currently being processed.</li>
+            <li id="has_action"><a title="GB_Hooks" href="../classes/GB_Hooks/has_action.xhtml">has_action()</a>
+                — Check if any action has been registered for a hook.</li>
+            <li id="has_filter"><a title="GB_Hooks" href="../classes/GB_Hooks/has_filter.xhtml">has_filter()</a>
+                — Check if any filter has been registered for a hook.</li>
+            <li id="remove_action"><a title="GB_Hooks" href="../classes/GB_Hooks/remove_action.xhtml">remove_action()</a>
+                — Removes a function from a specified action hook.</li>
+            <li id="remove_all_actions"><a title="GB_Hooks" href="../classes/GB_Hooks/remove_all_actions.xhtml">remove_all_actions()</a>
+                — Remove all of the hooks from an action.</li>
+            <li id="remove_all_filters"><a title="GB_Hooks" href="../classes/GB_Hooks/remove_all_filters.xhtml">remove_all_filters()</a>
+                — Remove all of the hooks from a filter.</li>
+            <li id="remove_filter"><a title="GB_Hooks" href="../classes/GB_Hooks/remove_filter.xhtml">remove_filter()</a>
+                — Removes a function from a specified filter hook.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-16T19:52:59+00:00 (commit #<span title="fd0a29610faf42285359a4046783d32cb4e82027">fd0a296</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">PSR-2 applied</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T17:45:50+00:00 (commit #<span title="97e2af2aec2a44cdc17f21526e76adb53717e7c9">97e2af2</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre v.3.0</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-28T19:49:37+00:00 (commit #<span title="b7d6c8ba3b0246047f3e7c6d4d20ca19b312d029">b7d6c8b</span>)</h3>
+            <div>
+              <p>
+                        Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
+                        Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
+                    </p>
+              <pre class="wrapped">lj v2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-25T23:49:58+00:00 (commit #<span title="23ca894a5ee2dc0e293cd10bda8d8a04ee5e006a">23ca894</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">#23:
+
+Написать автоматические тесты для всей системы
+https://github.com/Limych/GeniBase/issues/issue/23</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-03-25T21:34:13+00:00 (commit #<span title="4a7821b267b42de13f945f5f1eab3a59dce64bb9">4a7821b</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Hooks API incapsulated to static class.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

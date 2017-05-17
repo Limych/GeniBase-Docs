@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Leafo\ScssPhp\Parser::parseChunk</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#Leafo_ScssPhp">Leafo\ScssPhp</a>
+          </li>
+          <li class="separator">
+            <a title="Leafo\ScssPhp\Parser" href="../../classes/Leafo_ScssPhp_Parser.xhtml">Parser</a>
+          </li>
+          <li class="separator">parseChunk</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/gb/scssphp/src/Parser.php.xhtml#line289">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>Leafo\ScssPhp\Parser::</small>parseChunk</h1>
+        <h4>Parse a single chunk off the head of the buffer and append it to the current parse environment.</h4>
+        <p>Returns false when the buffer is empty, or when there is an error.
+
+This function is called repeatedly until the entire document is
+parsed.
+
+This parser is most similar to a recursive descent parser. Single
+functions represent discrete grammatical rules for the language, and
+they are able to capture the text that represents those rules.
+
+Consider the function Compiler::keyword(). (All parse functions are
+structured the same.)
+
+The function takes a single reference argument. When calling the
+function it will attempt to match a keyword on the head of the buffer.
+If it is successful, it will place the keyword in the referenced
+argument, advance the position in the buffer, and return true. If it
+fails then it won't advance the buffer and it will return false.
+
+All of these parse functions are powered by Compiler::match(), which behaves
+the same way, but takes a literal regular expression. Sometimes it is
+more convenient to use match instead of creating a new function.
+
+Because of the format of the functions, to parse an entire string of
+grammatical rules, you can chain them together using &amp;&amp;.
+
+But, if some of the rules in the chain succeed before one fails, then
+the buffer position will be left at an invalid state. In order to
+avoid this, Compiler::seek() is used to remember and set buffer positions.
+
+Before parsing a chain, use $s = $this-&gt;seek() to remember the current
+position into $s. Then if a chain fails, use $this-&gt;seek($s) to
+go back where we started.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function parseChunk()
+            </code>
+        </div>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>boolean</dt>
+          <dd/>
+        </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">289 - 694</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method parseChunk() has a Cyclomatic Complexity of 130. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">289 - 694</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method parseChunk() has an NPath complexity of 858945195343872075600. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">289 - 694</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
+              </td>
+              <td>The method parseChunk() has 406 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+            </tr>
+            <tr>
+              <td class="line">291</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">470</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $if. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - GB_DBase::set_row</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="GB_DBase" href="../../classes/GB_DBase.xhtml">GB_DBase</a>
+          </li>
+          <li class="separator">set_row</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/gb/class.gb-dbase.php.xhtml#line916">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>GB_DBase::</small>set_row</h1>
+        <h4>Вставка в таблицу новых данных или обновление существующих.</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function set_row(string
+        $tablename,
+            array
+        $data,
+            [boolean
+        $unique_key = false,
+            [boolean
+        $mode = false]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$tablename</code>
+                —
+                string</dt>
+          <dd><br/>обновляемой таблицы</dd>
+          <dt><code>$data</code>
+                —
+                array</dt>
+          <dd><br/>с данными для добавления</dd>
+          <dt><code>$unique_key</code>
+                —
+                boolean</dt>
+          <dd><br/>по которому определяется обновляемая строка таблицы.<br/>Либо массив вида 'ключ' =&gt; 'значение',<br/>либо массив имён ключей из $data,<br/>либо скалярное значение, тогда ключём будет "id".<br/>           false — для добавления новой строки в таблицу.</dd>
+          <dt><code>$mode</code>
+                —
+                boolean</dt>
+          <dd><br/>обновления. По-умолчанию: MODE_INSERT, если нет $unique_key,<br/>иначе — MODE_UPDATE.<br/>Варианты: добавление данных: MODE_INSERT, MODE_IGNORE («INSERT IGNORE …»), MODE_REPLACE;<br/>           обновление данных: MODE_UPDATE, MODE_DUPLICATE («INSERT … ON DUPLICATE KEY UPDATE»).</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>number|bool</dt>
+          <dd>изменённых/добавленных строк. False при ошибке.<br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
