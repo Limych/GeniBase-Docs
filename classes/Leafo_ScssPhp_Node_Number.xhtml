@@ -56,6 +56,9 @@
             <a href="#hierarchy">Hierarchy</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -65,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/gb/scssphp/src/Node/Number.php.xhtml#line28">Source</a>
+            <a href="../source/gb/scssphp/src/Node/Number.php.xhtml#line29">Source</a>
           </li>
         </ul>
       </nav>
@@ -121,6 +124,33 @@
             </li>
           </ul>
         </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">29 - 329</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#toomanypublicmethods" target="_blank" title="Code Size Rules">TooManyPublicMethods</a>
+              </td>
+              <td>The class Number has 11 public methods. Consider refactoring Number to keep number of public methods under 10.</td>
+            </tr>
+            <tr>
+              <td class="line">29 - 329</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" target="_blank" title="Code Size Rules">ExcessiveClassComplexity</a>
+              </td>
+              <td>The class Number has an overall complexity of 53 which is very high. The configured complexity threshold is 50.</td>
+            </tr>
+          </table>
+        </div>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -165,25 +195,20 @@
           <ul>
             <li id="__construct"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/__construct.xhtml">__construct()</a>
                 — Initialize number</li>
-            <li id="__toString">
-              <a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/__toString.xhtml">__toString()</a>
-            </li>
+            <li id="__toString"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/__toString.xhtml">__toString()</a>
+                — {@inheritdoc}</li>
             <li id="coerce"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/coerce.xhtml">coerce()</a>
                 — Coerce number to target units</li>
             <li id="normalize"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/normalize.xhtml">normalize()</a>
                 — Normalize number</li>
-            <li id="offsetExists">
-              <a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetExists.xhtml">offsetExists()</a>
-            </li>
-            <li id="offsetGet">
-              <a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetGet.xhtml">offsetGet()</a>
-            </li>
-            <li id="offsetSet">
-              <a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetSet.xhtml">offsetSet()</a>
-            </li>
-            <li id="offsetUnset">
-              <a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetUnset.xhtml">offsetUnset()</a>
-            </li>
+            <li id="offsetExists"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetExists.xhtml">offsetExists()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetGet"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetGet.xhtml">offsetGet()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetSet"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetSet.xhtml">offsetSet()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetUnset"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/offsetUnset.xhtml">offsetUnset()</a>
+                — {@inheritdoc}</li>
             <li id="output"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/output.xhtml">output()</a>
                 — Output number</li>
             <li id="unitStr"><a title="Leafo\ScssPhp\Node\Number" href="../classes/Leafo_ScssPhp_Node_Number/unitStr.xhtml">unitStr()</a>
@@ -194,6 +219,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-05-18T21:45:34+00:00 (commit #<span title="62babba2fb0fe17a54cb65fae45591423e85e443">62babba</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre 3.0.0</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-05-17T09:50:09+00:00 (commit #<span title="bcd6e9cbe070e4f3f5e3b7285b142fe6c5f64175">bcd6e9c</span>)</h3>
             <div>

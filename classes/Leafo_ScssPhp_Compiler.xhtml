@@ -68,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/gb/scssphp/src/Compiler.php.xhtml#line56">Source</a>
+            <a href="../source/gb/scssphp/src/Compiler.php.xhtml#line57">Source</a>
           </li>
         </ul>
       </nav>
@@ -127,20 +127,20 @@
                         'Leafo\ScssPhp\Formatter\Nested';
                     </li><li>protected  <a href="#members">$rootEnv</a>;
                     </li><li>protected  <a href="#members">$rootBlock</a>;
+                    </li><li>protected  <a href="#members">$env</a>;
+                    </li><li>protected  <a href="#members">$scope</a>;
+                    </li><li>protected  <a href="#members">$storeEnv</a>;
+                    </li><li>protected  <a href="#members">$charsetSeen</a>;
+                    </li><li>protected  <a href="#members">$sourceNames</a>;
                     </li><li>private  <a href="#members">$indentLevel</a>;
                     </li><li>private  <a href="#members">$commentsSeen</a>;
                     </li><li>private  <a href="#members">$extends</a>;
                     </li><li>private  <a href="#members">$extendsMap</a>;
                     </li><li>private  <a href="#members">$parsedFiles</a>;
-                    </li><li>private  <a href="#members">$env</a>;
-                    </li><li>private  <a href="#members">$scope</a>;
                     </li><li>private  <a href="#members">$parser</a>;
-                    </li><li>private  <a href="#members">$sourceNames</a>;
                     </li><li>private  <a href="#members">$sourceIndex</a>;
                     </li><li>private  <a href="#members">$sourceLine</a>;
                     </li><li>private  <a href="#members">$sourceColumn</a>;
-                    </li><li>private  <a href="#members">$storeEnv</a>;
-                    </li><li>private  <a href="#members">$charsetSeen</a>;
                     </li><li>private  <a href="#members">$stderr</a>;
                     </li><li>private  <a href="#members">$shouldEvaluate</a>;
                     </li><li>private  <a href="#members">$ignoreErrors</a>;
@@ -280,7 +280,7 @@
                         ;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/__construct.xhtml">__construct</a>()
                     </li><li>public string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compile.xhtml">compile</a>()
-                    </li><li>private Parser <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory</a>()
+                    </li><li>protected Parser <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isSelfExtend.xhtml">isSelfExtend</a>()
                     </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushExtends.xhtml">pushExtends</a>()
                     </li><li>protected OutputBlock <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/makeOutputBlock.xhtml">makeOutputBlock</a>()
@@ -289,6 +289,7 @@
                     </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectors.xhtml">flattenSelectors</a>()
                     </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtends.xhtml">matchExtends</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/matchExtendsSingle.xhtml">matchExtendsSingle</a>()
+                    </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractRelationshipFromFragment.xhtml">extractRelationshipFromFragment</a>()
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/combineSelectorSingle.xhtml">combineSelectorSingle</a>()
                     </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMedia.xhtml">compileMedia</a>()
                     </li><li>protected OutputBlock <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mediaParent.xhtml">mediaParent</a>()
@@ -313,11 +314,13 @@
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildren.xhtml">compileChildren</a>()
                     </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChildrenNoReturn.xhtml">compileChildrenNoReturn</a>()
                     </li><li>protected string <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileMediaQuery.xhtml">compileMediaQuery</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeDirectRelationships.xhtml">mergeDirectRelationships</a>()
                     </li><li>protected array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeMediaTypes.xhtml">mergeMediaTypes</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileImport.xhtml">compileImport</a>()
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/compileChild.xhtml">compileChild</a>()
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/expToString.xhtml">expToString</a>()
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isTruthy.xhtml">isTruthy</a>()
+                    </li><li>protected bool <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isImmediateRelationshipCombinator.xhtml">isImmediateRelationshipCombinator</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/shouldEval.xhtml">shouldEval</a>()
                     </li><li>protected array <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/reduce.xhtml">reduce</a>()
                     </li><li>private array|null <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fncall.xhtml">fncall</a>()
@@ -378,7 +381,7 @@
                     </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setEncoding.xhtml">setEncoding</a>()
                     </li><li>public Compiler <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/setIgnoreErrors.xhtml">setIgnoreErrors</a>()
                     </li><li>public void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/throwError.xhtml">throwError</a>()
-                    </li><li>private void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop</a>()
+                    </li><li>protected void <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fileExists.xhtml">fileExists</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callScssFunction.xhtml">callScssFunction</a>()
                     </li><li>protected boolean <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/callNativeFunction.xhtml">callNativeFunction</a>()
@@ -493,707 +496,763 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">328</td>
+              <td class="line">253</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $i. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">412 - 463</td>
+              <td class="line">331 - 382</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method flattenSelectors() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">473 - 515</td>
+              <td class="line">392 - 470</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method matchExtends() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method matchExtends() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">525 - 585</td>
-              <td>
-                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
-              </td>
-              <td>The method matchExtendsSingle() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
-            </tr>
-            <tr>
-              <td class="line">525 - 585</td>
+              <td class="line">392 - 470</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
-              <td>The method matchExtendsSingle() has an NPath complexity of 385. The configured NPath complexity threshold is 200.</td>
+              <td>The method matchExtends() has an NPath complexity of 1445. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">711</td>
+              <td class="line">453</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
+              </td>
+              <td>Avoid excessively long variable names like $injectBetweenSharedParts. Keep variable name length under 20.</td>
+            </tr>
+            <tr>
+              <td class="line">480 - 557</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method matchExtendsSingle() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">480 - 557</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method matchExtendsSingle() has an NPath complexity of 3675. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">498</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
+              </td>
+              <td>Avoid excessively long variable names like $extendingDecoratedTag. Keep variable name length under 20.</td>
+            </tr>
+            <tr>
+              <td class="line">575</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $j. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">575</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $i. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">710</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">781 - 856</td>
+              <td class="line">771 - 838</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method spliceTree() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">781 - 856</td>
+              <td class="line">771 - 838</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method spliceTree() has an NPath complexity of 6914. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">951 - 958</td>
+              <td class="line">921 - 934</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method isWithout() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1132 - 1148</td>
+              <td class="line">1103 - 1122</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method evalSelectorPart() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1164</td>
+              <td class="line">1140</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$key'.</td>
             </tr>
             <tr>
-              <td class="line">1321 - 1381</td>
+              <td class="line">1302 - 1365</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method compileMediaQuery() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1391 - 1453</td>
+              <td class="line">1406 - 1462</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method mergeMediaTypes() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1391 - 1453</td>
+              <td class="line">1406 - 1462</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method mergeMediaTypes() has an NPath complexity of 2304. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">1401</td>
+              <td class="line">1416</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1402</td>
+              <td class="line">1417</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $t1. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1411</td>
+              <td class="line">1426</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1412</td>
+              <td class="line">1427</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $t2. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1464 - 1501</td>
+              <td class="line">1473 - 1510</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method compileImport() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1511 - 1864</td>
+              <td class="line">1520 - 1882</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method compileChild() has a Cyclomatic Complexity of 86. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1511 - 1864</td>
+              <td class="line">1520 - 1882</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method compileChild() has an NPath complexity of 4360. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">1511 - 1864</td>
+              <td class="line">1520 - 1882</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
               </td>
-              <td>The method compileChild() has 354 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+              <td>The method compileChild() has 363 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
             </tr>
             <tr>
-              <td class="line">1647</td>
+              <td class="line">1659</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $if. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1721</td>
+              <td class="line">1735</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $d. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1875</td>
+              <td class="line">1893</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1944 - 2129</td>
+              <td class="line">1968 - 2149</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method reduce() has a Cyclomatic Complexity of 62. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">1944 - 2129</td>
+              <td class="line">1968 - 2149</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method reduce() has an NPath complexity of 13370. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">1944 - 2129</td>
+              <td class="line">1968 - 2149</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
               </td>
-              <td>The method reduce() has 186 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+              <td>The method reduce() has 182 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
             </tr>
             <tr>
-              <td class="line">1950</td>
+              <td class="line">1974</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">1972</td>
+              <td class="line">1999</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$ucOpName'.</td>
             </tr>
             <tr>
-              <td class="line">1973</td>
+              <td class="line">2000</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$ucLType'.</td>
             </tr>
             <tr>
-              <td class="line">1974</td>
+              <td class="line">2001</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$ucRType'.</td>
             </tr>
             <tr>
-              <td class="line">1980</td>
+              <td class="line">2007</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $fn. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2394 - 2453</td>
+              <td class="line">2388 - 2441</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method opColorColor() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">2394</td>
+              <td class="line">2388</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2464</td>
+              <td class="line">2452</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2485</td>
+              <td class="line">2472</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $op. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2601</td>
+              <td class="line">2587</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2637 - 2763</td>
+              <td class="line">2623 - 2778</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method compileValue() has a Cyclomatic Complexity of 26. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method compileValue() has a Cyclomatic Complexity of 33. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">2637 - 2763</td>
+              <td class="line">2623 - 2778</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
               </td>
-              <td>The method compileValue() has 127 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+              <td>The method compileValue() has 156 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
             </tr>
             <tr>
-              <td class="line">2652</td>
+              <td class="line">2638</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2652</td>
+              <td class="line">2638</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2652</td>
+              <td class="line">2638</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2662</td>
+              <td class="line">2648</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">2979</td>
+              <td class="line">2976</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $e. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">3105 - 3137</td>
+              <td class="line">3102 - 3142</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method get() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method get() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">3366</td>
+              <td class="line">3368</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $pi. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">3381 - 3415</td>
+              <td class="line">3383 - 3420</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method findImport() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method findImport() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">3556</td>
+              <td class="line">3565</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">3593</td>
+              <td class="line">3603</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">3662 - 3780</td>
+              <td class="line">3665 - 3773</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method applyArguments() has a Cyclomatic Complexity of 27. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">3662 - 3780</td>
+              <td class="line">3665 - 3773</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method applyArguments() has an NPath complexity of 1512. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">3662 - 3780</td>
+              <td class="line">3665 - 3773</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
               </td>
-              <td>The method applyArguments() has 119 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+              <td>The method applyArguments() has 109 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
             </tr>
             <tr>
-              <td class="line">4082</td>
+              <td class="line">3782 - 3828</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method coerceValue() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">3782 - 3828</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method coerceValue() has an NPath complexity of 240. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">3804</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4056</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $c. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4117</td>
+              <td class="line">4087</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4118</td>
+              <td class="line">4088</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $d. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4121</td>
+              <td class="line">4091</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4121</td>
+              <td class="line">4091</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4155</td>
+              <td class="line">4120</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4155</td>
+              <td class="line">4120</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4155</td>
+              <td class="line">4120</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4198</td>
+              <td class="line">4160</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4199</td>
+              <td class="line">4161</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4200</td>
+              <td class="line">4162</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4164</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4165</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4167</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4168</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4169</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">4184</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
             </tr>
             <tr>
               <td class="line">4202</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
-              <td>Avoid variables with short names like $m2. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4203</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $m1. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4205</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4206</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4207</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4226</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">4262</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
               <td>Avoid variables with short names like $t. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4262</td>
+              <td class="line">4202</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4311</td>
+              <td class="line">4246</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4311</td>
+              <td class="line">4246</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4311</td>
+              <td class="line">4246</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4341</td>
+              <td class="line">4264</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $r. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4341</td>
+              <td class="line">4264</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $g. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4341</td>
+              <td class="line">4264</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $b. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4341</td>
+              <td class="line">4264</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4353 - 4394</td>
+              <td class="line">4270 - 4302</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method alterColor() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">4353</td>
+              <td class="line">4270</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $fn. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4409</td>
+              <td class="line">4310</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$i'.</td>
             </tr>
             <tr>
-              <td class="line">4427</td>
+              <td class="line">4321</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$base'.</td>
             </tr>
             <tr>
-              <td class="line">4427</td>
+              <td class="line">4321</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
               <td>Avoid unused local variables such as '$i'.</td>
             </tr>
             <tr>
-              <td class="line">4575</td>
+              <td class="line">4439</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $w. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4576</td>
+              <td class="line">4440</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4578</td>
+              <td class="line">4442</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $w1. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4579</td>
+              <td class="line">4443</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $w2. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4603</td>
+              <td class="line">4461</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4603</td>
+              <td class="line">4461</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4603</td>
+              <td class="line">4461</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4617</td>
+              <td class="line">4469</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $h. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4617</td>
+              <td class="line">4469</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $s. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4617</td>
+              <td class="line">4469</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $l. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">4617</td>
+              <td class="line">4469</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $a. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">5044</td>
+              <td class="line">4802</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">5064</td>
+              <td class="line">4817</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">5550</td>
+              <td class="line">5177</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">5555 - 5557</td>
+              <td class="line">5182</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $libGlobalVariableExists. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">5619</td>
+              <td class="line">5225</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $n. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">5635</td>
+              <td class="line">5241</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
@@ -1240,14 +1299,8 @@
         <div class="styled members">
           <h4>private</h4>
           <ul class="members">
-            <li id="charsetSeen">
-              <strong>$charsetSeen</strong>
-            </li>
             <li id="commentsSeen">
               <strong>$commentsSeen</strong>
-            </li>
-            <li id="env">
-              <strong>$env</strong>
             </li>
             <li id="extends">
               <strong>$extends</strong>
@@ -1267,9 +1320,6 @@
             <li id="parser">
               <strong>$parser</strong>
             </li>
-            <li id="scope">
-              <strong>$scope</strong>
-            </li>
             <li id="shouldEvaluate">
               <strong>$shouldEvaluate</strong>
             </li>
@@ -1282,20 +1332,20 @@
             <li id="sourceLine">
               <strong>$sourceLine</strong>
             </li>
-            <li id="sourceNames">
-              <strong>$sourceNames</strong>
-            </li>
             <li id="stderr">
               <strong>$stderr</strong>
-            </li>
-            <li id="storeEnv">
-              <strong>$storeEnv</strong>
             </li>
           </ul>
           <h4>protected</h4>
           <ul class="members">
+            <li id="charsetSeen">
+              <strong>$charsetSeen</strong>
+            </li>
             <li id="encoding">
               <strong>$encoding</strong>
+            </li>
+            <li id="env">
+              <strong>$env</strong>
             </li>
             <li id="formatter">
               <strong>$formatter</strong>
@@ -1531,6 +1581,15 @@
             <li id="rootEnv">
               <strong>$rootEnv</strong>
             </li>
+            <li id="scope">
+              <strong>$scope</strong>
+            </li>
+            <li id="sourceNames">
+              <strong>$sourceNames</strong>
+            </li>
+            <li id="storeEnv">
+              <strong>$storeEnv</strong>
+            </li>
             <li id="userFunctions">
               <strong>$userFunctions</strong>
             </li>
@@ -1588,14 +1647,10 @@
                 — Filter env stack</li>
             <li id="fncall"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fncall.xhtml">fncall()</a>
                 — Function caller</li>
-            <li id="handleImportLoop"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop()</a>
-                — Handle import loop</li>
             <li id="hueToRGB"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hueToRGB.xhtml">hueToRGB()</a>
                 — Hue to RGB helper</li>
             <li id="isWithout"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isWithout.xhtml">isWithout()</a>
                 — Filter WITH rules</li>
-            <li id="parserFactory"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory()</a>
-                — Instantiate parser</li>
             <li id="spliceTree"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/spliceTree.xhtml">spliceTree()</a>
                 — Splice parse tree</li>
           </ul>
@@ -1671,6 +1726,8 @@
                 — Reduce expression to string</li>
             <li id="extractInterpolation"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractInterpolation.xhtml">extractInterpolation()</a>
                 — Extract interpolation; it doesn't need to be recursive, compileValue will handle that</li>
+            <li id="extractRelationshipFromFragment"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/extractRelationshipFromFragment.xhtml">extractRelationshipFromFragment()</a>
+                — Extract a relationship from the fragment.</li>
             <li id="fileExists"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fileExists.xhtml">fileExists()</a>
                 — Does file exist?</li>
             <li id="fixColor"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/fixColor.xhtml">fixColor()</a>
@@ -1678,7 +1735,7 @@
             <li id="flattenList"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenList.xhtml">flattenList()</a>
                 — Flatten list</li>
             <li id="flattenSelectorSingle"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectorSingle.xhtml">flattenSelectorSingle()</a>
-                — Flatten selector single; joins together .</li>
+                — Flatten selector single; joins together .classes and #ids</li>
             <li id="flattenSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/flattenSelectors.xhtml">flattenSelectors()</a>
                 — Flatten selectors</li>
             <li id="getBuiltinFunction"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getBuiltinFunction.xhtml">getBuiltinFunction()</a>
@@ -1687,6 +1744,8 @@
                 — Helper to normalize args containing numbers</li>
             <li id="getStoreEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/getStoreEnv.xhtml">getStoreEnv()</a>
                 — Get store environment</li>
+            <li id="handleImportLoop"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/handleImportLoop.xhtml">handleImportLoop()</a>
+                — Handle import loop</li>
             <li id="has"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/has.xhtml">has()</a>
                 — Has variable?</li>
             <li id="hasSelectorPlaceholder"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/hasSelectorPlaceholder.xhtml">hasSelectorPlaceholder()</a>
@@ -1695,6 +1754,8 @@
                 — Import file</li>
             <li id="injectVariables"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/injectVariables.xhtml">injectVariables()</a>
                 — Inject variables</li>
+            <li id="isImmediateRelationshipCombinator"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isImmediateRelationshipCombinator.xhtml">isImmediateRelationshipCombinator()</a>
+                — Is the value a direct relationship combinator?</li>
             <li id="isSelfExtend"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isSelfExtend.xhtml">isSelfExtend()</a>
                 — Is self extend?</li>
             <li id="isTruthy"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/isTruthy.xhtml">isTruthy()</a>
@@ -1933,6 +1994,9 @@
                 — Match extends single</li>
             <li id="mediaParent"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mediaParent.xhtml">mediaParent()</a>
                 — Media parent</li>
+            <li id="mergeDirectRelationships">
+              <a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeDirectRelationships.xhtml">mergeDirectRelationships()</a>
+            </li>
             <li id="mergeMediaTypes"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/mergeMediaTypes.xhtml">mergeMediaTypes()</a>
                 — Merge media types</li>
             <li id="missingSelectors"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/missingSelectors.xhtml">missingSelectors()</a>
@@ -1979,6 +2043,8 @@
                 — Boolean or</li>
             <li id="opSubNumberNumber"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/opSubNumberNumber.xhtml">opSubNumberNumber()</a>
                 — Subtract numbers</li>
+            <li id="parserFactory"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/parserFactory.xhtml">parserFactory()</a>
+                — Instantiate parser</li>
             <li id="popEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/popEnv.xhtml">popEnv()</a>
                 — Pop environment</li>
             <li id="pushEnv"><a title="Leafo\ScssPhp\Compiler" href="../classes/Leafo_ScssPhp_Compiler/pushEnv.xhtml">pushEnv()</a>
@@ -2062,6 +2128,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-05-18T21:45:34+00:00 (commit #<span title="62babba2fb0fe17a54cb65fae45591423e85e443">62babba</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Pre 3.0.0</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-05-17T09:50:09+00:00 (commit #<span title="bcd6e9cbe070e4f3f5e3b7285b142fe6c5f64175">bcd6e9c</span>)</h3>
             <div>
