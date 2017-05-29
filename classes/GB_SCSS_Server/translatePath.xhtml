@@ -62,19 +62,21 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/gb/load-style.php.xhtml#line83">Source</a>
+            <a href="../../source/gb/load-style.php.xhtml#line91">Source</a>
           </li>
         </ul>
       </nav>
       <section>
         <h1><small>GB_SCSS_Server::</small>translatePath</h1>
-        <h4>Translate path from "section:relative_path" to absolute path</h4>
+        <h4>Translate path from "relative_path" to absolute path</h4>
         <p/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
           <code>public function translatePath(string
-        $url )
+        $url,
+            [boolean
+        $allow_partial = true] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
@@ -82,7 +84,11 @@
           <dt><code>$url</code>
                 —
                 string</dt>
-          <dd><br/>path as "section:relative_path".</dd>
+          <dd>path as "relative_path".</dd>
+          <dt><code>$allow_partial</code>
+                —
+                boolean</dt>
+          <dd/>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - GB_Session_Tokens</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">GB_Session_Tokens</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/gb/class.gb-session-tokens.php.xhtml#line8">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>GB_Session_Tokens</h1>
+        <h4>Abstract class for managing user session tokens.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class GB_Session_Tokens
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$user_id</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/__construct.xhtml">__construct</a>()
+                    </li><li>public final static GB_Session_Tokens <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_instance.xhtml">get_instance</a>()
+                    </li><li>private final string <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/hash_token.xhtml">hash_token</a>()
+                    </li><li>public final array <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get.xhtml">get</a>()
+                    </li><li>public final bool <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/verify.xhtml">verify</a>()
+                    </li><li>public final string <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/create.xhtml">create</a>()
+                    </li><li>public final void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/update.xhtml">update</a>()
+                    </li><li>public final void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy.xhtml">destroy</a>()
+                    </li><li>public final void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_others.xhtml">destroy_others</a>()
+                    </li><li>protected final bool <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/is_still_valid.xhtml">is_still_valid</a>()
+                    </li><li>public final void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all.xhtml">destroy_all</a>()
+                    </li><li>public final static void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all_for_all_users.xhtml">destroy_all_for_all_users</a>()
+                    </li><li>public final array <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_all.xhtml">get_all</a>()
+                    </li><li>protected abstract array <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_sessions.xhtml">get_sessions</a>()
+                    </li><li>protected abstract array|null <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_session.xhtml">get_session</a>()
+                    </li><li>protected abstract void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/update_session.xhtml">update_session</a>()
+                    </li><li>protected abstract void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_other_sessions.xhtml">destroy_other_sessions</a>()
+                    </li><li>protected abstract void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all_sessions.xhtml">destroy_all_sessions</a>()
+                    </li><li>public static void <a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/drop_sessions.xhtml">drop_sessions</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="user_id"><strong>$user_id</strong>
+                —
+                int<br/><span class="indent">User ID.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="hash_token"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/hash_token.xhtml">hash_token()</a>
+                — Hashes a session token for storage.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="__construct"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/__construct.xhtml">__construct()</a>
+                — Protected constructor.</li>
+            <li id="destroy_all_sessions"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all_sessions.xhtml">destroy_all_sessions()</a>
+                — This method should destroy all sessions for a user.</li>
+            <li id="destroy_other_sessions"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_other_sessions.xhtml">destroy_other_sessions()</a>
+                — This method should destroy all session tokens for this user, except a single session passed.</li>
+            <li id="get_session"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_session.xhtml">get_session()</a>
+                — This method should look up a session by its verifier (token hash).</li>
+            <li id="get_sessions"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_sessions.xhtml">get_sessions()</a>
+                — This method should retrieve all sessions of a user, keyed by verifier.</li>
+            <li id="is_still_valid"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/is_still_valid.xhtml">is_still_valid()</a>
+                — Determine whether a session token is still valid, based on expiration.</li>
+            <li id="update_session"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/update_session.xhtml">update_session()</a>
+                — This method should update a session by its verifier.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="create"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/create.xhtml">create()</a>
+                — Generate a session token and attach session information to it.</li>
+            <li id="destroy"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy.xhtml">destroy()</a>
+                — Destroy a session token.</li>
+            <li id="destroy_all"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all.xhtml">destroy_all()</a>
+                — Destroy all session tokens for a user.</li>
+            <li id="destroy_all_for_all_users"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_all_for_all_users.xhtml">destroy_all_for_all_users()</a>
+                — Destroy all session tokens for all users.</li>
+            <li id="destroy_others"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/destroy_others.xhtml">destroy_others()</a>
+                — Destroy all session tokens for this user, except a single token, presumably the one in use.</li>
+            <li id="drop_sessions"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/drop_sessions.xhtml">drop_sessions()</a>
+                — This static method should destroy all session tokens for all users.</li>
+            <li id="get"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get.xhtml">get()</a>
+                — Get a user's session.</li>
+            <li id="get_all"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_all.xhtml">get_all()</a>
+                — Retrieve all sessions of a user.</li>
+            <li id="get_instance"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/get_instance.xhtml">get_instance()</a>
+                — Get a session token manager instance for a user.</li>
+            <li id="update"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/update.xhtml">update()</a>
+                — Update a session token.</li>
+            <li id="verify"><a title="GB_Session_Tokens" href="../classes/GB_Session_Tokens/verify.xhtml">verify()</a>
+                — Validate a user's session token as authentic.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-05-29T22:09:56+00:00 (commit #<span title="5cb497a317ef48a09e17d0f794523031ca366750">5cb497a</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Core remastered to Bootstrap CSS framework.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

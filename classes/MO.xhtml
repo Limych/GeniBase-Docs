@@ -81,21 +81,24 @@
                 extends <a title="Gettext_Translations" href="../classes/Gettext_Translations.xhtml">Gettext_Translations</a>
             {<br/><ul class="none"><li>// members</li><li>public integer <a href="#members">$_nplurals</a> =
                         2;
+                    </li><li>private string <a href="#members">$filename</a> =
+                        '';
                     </li></ul><ul class="none"><li>// Inherited members from <span title="Translations">Translations</span></li><li>public array <a href="#members">$entries</a>;
                         </li><li>public array <a href="#members">$headers</a>;
-                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="MO" href="../classes/MO/import_from_file.xhtml">import_from_file</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export_to_file.xhtml">export_to_file</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export.xhtml">export</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/is_entry_good_for_export.xhtml">is_entry_good_for_export</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export_to_file_handle.xhtml">export_to_file_handle</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export_original.xhtml">export_original</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export_translations.xhtml">export_translations</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/export_headers.xhtml">export_headers</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/get_byteorder.xhtml">get_byteorder</a>()
+                        </li></ul><ul class="none"><li>// methods</li><li>public string <a title="MO" href="../classes/MO/get_filename.xhtml">get_filename</a>()
+                    </li><li>public void <a title="MO" href="../classes/MO/import_from_file.xhtml">import_from_file</a>()
+                    </li><li>public bool <a title="MO" href="../classes/MO/export_to_file.xhtml">export_to_file</a>()
+                    </li><li>public string|false <a title="MO" href="../classes/MO/export.xhtml">export</a>()
+                    </li><li>public bool <a title="MO" href="../classes/MO/is_entry_good_for_export.xhtml">is_entry_good_for_export</a>()
+                    </li><li>public true <a title="MO" href="../classes/MO/export_to_file_handle.xhtml">export_to_file_handle</a>()
+                    </li><li>public string <a title="MO" href="../classes/MO/export_original.xhtml">export_original</a>()
+                    </li><li>public string <a title="MO" href="../classes/MO/export_translations.xhtml">export_translations</a>()
+                    </li><li>public string <a title="MO" href="../classes/MO/export_headers.xhtml">export_headers</a>()
+                    </li><li>public string|false <a title="MO" href="../classes/MO/get_byteorder.xhtml">get_byteorder</a>()
                     </li><li>public void <a title="MO" href="../classes/MO/import_from_reader.xhtml">import_from_reader</a>()
                     </li><li>public void <a title="MO" href="../classes/MO/make_entry.xhtml">make_entry</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/select_plural_form.xhtml">select_plural_form</a>()
-                    </li><li>public void <a title="MO" href="../classes/MO/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
+                    </li><li>public string <a title="MO" href="../classes/MO/select_plural_form.xhtml">select_plural_form</a>()
+                    </li><li>public int <a title="MO" href="../classes/MO/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Gettext_Translations">Gettext_Translations</span></li><li>public void <a title="Gettext_Translations" href="../classes/Gettext_Translations/gettext_select_plural_form.xhtml">gettext_select_plural_form</a>()
                         </li><li>public array <a title="Gettext_Translations" href="../classes/Gettext_Translations/nplurals_and_expression_from_header.xhtml">nplurals_and_expression_from_header</a>()
                         </li><li>public void <a title="Gettext_Translations" href="../classes/Gettext_Translations/make_plural_form_function.xhtml">make_plural_form_function</a>()
@@ -110,7 +113,7 @@
                         </li><li>public void <a title="Translations" href="../classes/Translations/translate_entry.xhtml">translate_entry</a>()
                         </li><li>public string <a title="Translations" href="../classes/Translations/translate.xhtml">translate</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/select_plural_form.xhtml">select_plural_form</a>()
-                        </li><li>public void <a title="Translations" href="../classes/Translations/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
+                        </li><li>public int <a title="Translations" href="../classes/Translations/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/translate_plural.xhtml">translate_plural</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/merge_with.xhtml">merge_with</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/merge_originals_with.xhtml">merge_originals_with</a>()
@@ -138,70 +141,77 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">35</td>
+              <td class="line">14 - 322</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#toomanypublicmethods" target="_blank" title="Code Size Rules">TooManyPublicMethods</a>
+              </td>
+              <td>The class MO has 11 public methods. Consider refactoring MO to keep number of public methods under 10.</td>
+            </tr>
+            <tr>
+              <td class="line">56</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $fh. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">66</td>
+              <td class="line">94</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $fh. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">76</td>
+              <td class="line">100</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $originals_lenghts_addr. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">77</td>
+              <td class="line">101</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $translations_lenghts_addr. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">164 - 246</td>
+              <td class="line">196 - 276</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method import_from_reader() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">164 - 246</td>
+              <td class="line">196 - 276</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method import_from_reader() has an NPath complexity of 3584. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">192</td>
+              <td class="line">223</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $originals_lengths_length. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">203</td>
+              <td class="line">234</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $translations_lenghts_length. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">226</td>
+              <td class="line">257</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $o. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">227</td>
+              <td class="line">258</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
@@ -218,16 +228,22 @@
             </tr>
           </thead>
           <tr>
-            <td class="nummeric">117</td>
+            <td class="nummeric">145</td>
             <td>warnings for control characters</td>
           </tr>
           <tr>
-            <td class="nummeric">128</td>
+            <td class="nummeric">157</td>
             <td>warnings for control characters</td>
           </tr>
         </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="filename"><strong>$filename</strong>
+                —
+                string<br/><span class="indent">Loaded MO file.</span></li>
+          </ul>
           <h4>public</h4>
           <ul class="members">
             <li id="_nplurals">
@@ -266,6 +282,8 @@
             <li id="get_byteorder">
               <a title="MO" href="../classes/MO/get_byteorder.xhtml">get_byteorder()</a>
             </li>
+            <li id="get_filename"><a title="MO" href="../classes/MO/get_filename.xhtml">get_filename()</a>
+                — Returns the loaded MO file.</li>
             <li id="get_plural_forms_count">
               <a title="MO" href="../classes/MO/get_plural_forms_count.xhtml">get_plural_forms_count()</a>
             </li>
@@ -342,6 +360,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-05-29T22:09:56+00:00 (commit #<span title="5cb497a317ef48a09e17d0f794523031ca366750">5cb497a</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Core remastered to Bootstrap CSS framework.</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-05-17T09:50:09+00:00 (commit #<span title="bcd6e9cbe070e4f3f5e3b7285b142fe6c5f64175">bcd6e9c</span>)</h3>
             <div>
               <p>
@@ -372,13 +400,13 @@
             </div>
           </li>
           <li>
-            <h3>2015-03-28T20:12:34+00:00 (commit #<span title="d4f4f4917b0deda2160158f5201a146b676e21d2">d4f4f49</span>)</h3>
+            <h3>2015-03-28T20:41:13+00:00 (commit #<span title="d9c4cd1c7c22eef80b7d899c8233eb441ba4434a">d9c4cd1</span>)</h3>
             <div>
               <p>
                         Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
                         Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
                     </p>
-              <pre class="wrapped">lj v4</pre>
+              <pre class="wrapped">lj v4 temp</pre>
             </div>
           </li>
           <li>
@@ -407,13 +435,13 @@ https://github.com/Limych/GeniBase/issues/issue/23</pre>
             </div>
           </li>
           <li>
-            <h3>2015-03-05T21:28:29+00:00 (commit #<span title="68c7d2a066cabd9986a161bee3aed92adabf743b">68c7d2a</span>)</h3>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
             <div>
               <p>
                         Author: Limych (andrey@khrolenok.ru) /
                         Commiter: Limych (andrey@khrolenok.ru)
                     </p>
-              <pre class="wrapped">Modified sorting of fused search results.</pre>
+              <pre class="wrapped">Added URLs control functions.</pre>
             </div>
           </li>
         </ul>

@@ -68,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/gb/pomo/po.php.xhtml#line20">Source</a>
+            <a href="../source/gb/pomo/po.php.xhtml#line22">Source</a>
           </li>
         </ul>
       </nav>
@@ -88,16 +88,18 @@
                     </li><li>public string <a title="PO" href="../classes/PO/export.xhtml">export</a>()
                     </li><li>public bool <a title="PO" href="../classes/PO/export_to_file.xhtml">export_to_file</a>()
                     </li><li>public void <a title="PO" href="../classes/PO/set_comment_before_headers.xhtml">set_comment_before_headers</a>()
-                    </li><li>public string <a title="PO" href="../classes/PO/poify.xhtml">poify</a>()
-                    </li><li>public string <a title="PO" href="../classes/PO/unpoify.xhtml">unpoify</a>()
-                    </li><li>public void <a title="PO" href="../classes/PO/prepend_each_line.xhtml">prepend_each_line</a>()
-                    </li><li>public void <a title="PO" href="../classes/PO/comment_block.xhtml">comment_block</a>()
-                    </li><li>public false|string <a title="PO" href="../classes/PO/export_entry.xhtml">export_entry</a>()
+                    </li><li>public static string <a title="PO" href="../classes/PO/poify.xhtml">poify</a>()
+                    </li><li>public static string <a title="PO" href="../classes/PO/unpoify.xhtml">unpoify</a>()
+                    </li><li>public static void <a title="PO" href="../classes/PO/prepend_each_line.xhtml">prepend_each_line</a>()
+                    </li><li>public static void <a title="PO" href="../classes/PO/comment_block.xhtml">comment_block</a>()
+                    </li><li>public static false|string <a title="PO" href="../classes/PO/export_entry.xhtml">export_entry</a>()
+                    </li><li>public static void <a title="PO" href="../classes/PO/match_begin_and_end_newlines.xhtml">match_begin_and_end_newlines</a>()
                     </li><li>public boolean <a title="PO" href="../classes/PO/import_from_file.xhtml">import_from_file</a>()
+                    </li><li>protected static bool <a title="PO" href="../classes/PO/is_final.xhtml">is_final</a>()
                     </li><li>public null|false|array <a title="PO" href="../classes/PO/read_entry.xhtml">read_entry</a>()
                     </li><li>public boolean <a title="PO" href="../classes/PO/read_line.xhtml">read_line</a>()
                     </li><li>public void <a title="PO" href="../classes/PO/add_comment_to_entry.xhtml">add_comment_to_entry</a>()
-                    </li><li>public sring <a title="PO" href="../classes/PO/trim_quotes.xhtml">trim_quotes</a>()
+                    </li><li>public static sring <a title="PO" href="../classes/PO/trim_quotes.xhtml">trim_quotes</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Gettext_Translations">Gettext_Translations</span></li><li>public void <a title="Gettext_Translations" href="../classes/Gettext_Translations/gettext_select_plural_form.xhtml">gettext_select_plural_form</a>()
                         </li><li>public array <a title="Gettext_Translations" href="../classes/Gettext_Translations/nplurals_and_expression_from_header.xhtml">nplurals_and_expression_from_header</a>()
                         </li><li>public void <a title="Gettext_Translations" href="../classes/Gettext_Translations/make_plural_form_function.xhtml">make_plural_form_function</a>()
@@ -112,7 +114,7 @@
                         </li><li>public void <a title="Translations" href="../classes/Translations/translate_entry.xhtml">translate_entry</a>()
                         </li><li>public string <a title="Translations" href="../classes/Translations/translate.xhtml">translate</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/select_plural_form.xhtml">select_plural_form</a>()
-                        </li><li>public void <a title="Translations" href="../classes/Translations/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
+                        </li><li>public int <a title="Translations" href="../classes/Translations/get_plural_forms_count.xhtml">get_plural_forms_count</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/translate_plural.xhtml">translate_plural</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/merge_with.xhtml">merge_with</a>()
                         </li><li>public void <a title="Translations" href="../classes/Translations/merge_originals_with.xhtml">merge_originals_with</a>()
@@ -140,81 +142,81 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">23</td>
+              <td class="line">24</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $comments_before_headers. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">87</td>
+              <td class="line">78</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $fh. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">130</td>
+              <td class="line">115</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $po. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">162</td>
+              <td class="line">138</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#longvariable" target="_blank" title="Naming Rules">LongVariable</a>
               </td>
               <td>Avoid excessively long variable names like $previous_is_backslash. Keep variable name length under 20.</td>
             </tr>
             <tr>
-              <td class="line">233 - 263</td>
+              <td class="line">208 - 230</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method export_entry() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method export_entry() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">233 - 263</td>
+              <td class="line">208 - 230</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
-              <td>The method export_entry() has an NPath complexity of 384. The configured NPath complexity threshold is 200.</td>
+              <td>The method export_entry() has an NPath complexity of 576. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">237</td>
+              <td class="line">210</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $po. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">272</td>
+              <td class="line">266</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">302 - 417</td>
+              <td class="line">302 - 413</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method read_entry() has a Cyclomatic Complexity of 34. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method read_entry() has a Cyclomatic Complexity of 37. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">302 - 417</td>
+              <td class="line">302 - 413</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
-              <td>The method read_entry() has an NPath complexity of 682. The configured NPath complexity threshold is 200.</td>
+              <td>The method read_entry() has an NPath complexity of 2728. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">302 - 417</td>
+              <td class="line">302 - 413</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#excessivemethodlength" target="_blank" title="Code Size Rules">ExcessiveMethodLength</a>
               </td>
-              <td>The method read_entry() has 116 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
+              <td>The method read_entry() has 112 lines of code. Current threshold is set to 100. Avoid really long methods.</td>
             </tr>
             <tr>
               <td class="line">302</td>
@@ -224,21 +226,21 @@
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">328</td>
+              <td class="line">325</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $m. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">427</td>
+              <td class="line">423</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $f. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">471</td>
+              <td class="line">463</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
@@ -255,7 +257,7 @@
             </tr>
           </thead>
           <tr>
-            <td class="nummeric">51</td>
+            <td class="nummeric">50</td>
             <td>sorting</td>
           </tr>
         </table>
@@ -276,6 +278,11 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="is_final"><a title="PO" href="../classes/PO/is_final.xhtml">is_final()</a>
+                — Helper function for read_entry</li>
+          </ul>
           <h4>public</h4>
           <ul>
             <li id="add_comment_to_entry">
@@ -295,6 +302,9 @@
                 — Same as {@link export}, but writes the result to a file</li>
             <li id="import_from_file">
               <a title="PO" href="../classes/PO/import_from_file.xhtml">import_from_file()</a>
+            </li>
+            <li id="match_begin_and_end_newlines">
+              <a title="PO" href="../classes/PO/match_begin_and_end_newlines.xhtml">match_begin_and_end_newlines()</a>
             </li>
             <li id="poify"><a title="PO" href="../classes/PO/poify.xhtml">poify()</a>
                 — Formats a string in PO-style</li>
@@ -373,6 +383,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-05-29T22:09:56+00:00 (commit #<span title="5cb497a317ef48a09e17d0f794523031ca366750">5cb497a</span>)</h3>
+            <div>
+              <p>
+                        Author: Limych (andrey@khrolenok.ru) /
+                        Commiter: Limych (andrey@khrolenok.ru)
+                    </p>
+              <pre class="wrapped">Core remastered to Bootstrap CSS framework.</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-05-17T09:50:09+00:00 (commit #<span title="bcd6e9cbe070e4f3f5e3b7285b142fe6c5f64175">bcd6e9c</span>)</h3>
             <div>
               <p>
@@ -403,13 +423,13 @@
             </div>
           </li>
           <li>
-            <h3>2015-03-28T20:12:34+00:00 (commit #<span title="d4f4f4917b0deda2160158f5201a146b676e21d2">d4f4f49</span>)</h3>
+            <h3>2015-03-28T20:41:13+00:00 (commit #<span title="d9c4cd1c7c22eef80b7d899c8233eb441ba4434a">d9c4cd1</span>)</h3>
             <div>
               <p>
                         Author: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru) /
                         Commiter: Калёнов Денис Михайлович (a-KaDeMi-k@yandex.ru)
                     </p>
-              <pre class="wrapped">lj v4</pre>
+              <pre class="wrapped">lj v4 temp</pre>
             </div>
           </li>
           <li>
@@ -451,13 +471,13 @@ https://github.com/Limych/GeniBase/issues/issue/23</pre>
             </div>
           </li>
           <li>
-            <h3>2015-03-05T21:28:29+00:00 (commit #<span title="68c7d2a066cabd9986a161bee3aed92adabf743b">68c7d2a</span>)</h3>
+            <h3>2015-03-09T22:37:18+00:00 (commit #<span title="d1799b6e2a35bb02de4061c3e87224d958dc1ac9">d1799b6</span>)</h3>
             <div>
               <p>
                         Author: Limych (andrey@khrolenok.ru) /
                         Commiter: Limych (andrey@khrolenok.ru)
                     </p>
-              <pre class="wrapped">Modified sorting of fused search results.</pre>
+              <pre class="wrapped">Added URLs control functions.</pre>
             </div>
           </li>
         </ul>
