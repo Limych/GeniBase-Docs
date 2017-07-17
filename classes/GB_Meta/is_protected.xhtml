@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <title>phpDox - GB_Meta::is_protected</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
@@ -76,7 +76,7 @@
           <code>public function is_protected(string
         $meta_key,
             [<a title="string|null" href="../../classes/string|null.xhtml">string|null</a>
-        $meta_type = null] )
+        $meta_type = NULL] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
@@ -96,10 +96,48 @@
           <dd>True if the key is protected, false otherwise.<br/>
         </dd>
         </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">913</td>
+              <td>12</td>
+              <td>
+                <span title="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">error</span>
+              </td>
+              <td>Method name "GB_Meta::is_protected" is not in camel caps format</td>
+            </tr>
+            <tr>
+              <td class="line">913</td>
+              <td>12</td>
+              <td>
+                <span title="Squiz.Scope.MethodScope.Missing">error</span>
+              </td>
+              <td>Visibility must be declared on method "is_protected"</td>
+            </tr>
+            <tr>
+              <td class="line">921</td>
+              <td>11</td>
+              <td>
+                <span title="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine">error</span>
+              </td>
+              <td>Whitespace found at end of line</td>
+            </tr>
+          </table>
+        </div>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

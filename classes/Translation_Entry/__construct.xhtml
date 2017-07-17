@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <title>phpDox - Translation_Entry::__construct</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
@@ -81,10 +81,296 @@
                 array</dt>
           <dd>associative array, support following keys:<br/>- singular (string) -- the string to translate, if omitted and empty entry will be created<br/>- plural (string) -- the plural form of the string, setting this will set to true<br/>- translations (array) -- translations of the string and possibly -- its plural forms<br/>- context (string) -- a string differentiating two equal strings used in different contexts<br/>- translator_comments (string) -- comments left by translators<br/>- extracted_comments (string) -- comments left by developers<br/>- references (array) -- places in the code this strings is used, in relative_to_root_path/file.php:linenum form<br/>- flags (array) -- flags like php-format<br/></dd>
         </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">43</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">43</td>
+              <td>5</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 8 spaces, found 4</td>
+            </tr>
+            <tr>
+              <td class="line">43</td>
+              <td>5</td>
+              <td>
+                <span title="Squiz.Scope.MethodScope.Missing">error</span>
+              </td>
+              <td>Visibility must be declared on method "__construct"</td>
+            </tr>
+            <tr>
+              <td class="line">43</td>
+              <td>27</td>
+              <td>
+                <span title="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen">error</span>
+              </td>
+              <td>Expected 0 spaces between opening bracket and argument "$args"; 1 found</td>
+            </tr>
+            <tr>
+              <td class="line">43</td>
+              <td>43</td>
+              <td>
+                <span title="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose">error</span>
+              </td>
+              <td>Expected 0 spaces between argument "$args" and closing bracket; 1 found</td>
+            </tr>
+            <tr>
+              <td class="line">43</td>
+              <td>45</td>
+              <td>
+                <span title="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine">error</span>
+              </td>
+              <td>Opening brace should be on a new line</td>
+            </tr>
+            <tr>
+              <td class="line">44</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">45</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">45</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">46</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">46</td>
+              <td>13</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 16 spaces, found 12</td>
+            </tr>
+            <tr>
+              <td class="line">47</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">47</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">48</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">49</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">49</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">50</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">50</td>
+              <td>13</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 16 spaces, found 12</td>
+            </tr>
+            <tr>
+              <td class="line">51</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">51</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">52</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">52</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">52</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">53</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">53</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">53</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">54</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">54</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">54</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">55</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">55</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.Incorrect">error</span>
+              </td>
+              <td>Line indented incorrectly; expected at least 12 spaces, found 8</td>
+            </tr>
+            <tr>
+              <td class="line">55</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">56</td>
+              <td>1</td>
+              <td>
+                <span title="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">error</span>
+              </td>
+              <td>Spaces must be used for alignment; tabs are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">56</td>
+              <td>5</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 8 spaces, found 4</td>
+            </tr>
+          </table>
+        </div>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

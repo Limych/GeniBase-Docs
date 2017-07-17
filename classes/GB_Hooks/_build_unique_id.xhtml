@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <title>phpDox - GB_Hooks::_build_unique_id</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
@@ -114,10 +114,112 @@ shouldn't have any speed penalty.</p>
           <dd>Unique ID for usage as array key or false if $priority === false<br/>and $function is an object reference, and it does not already have
         a unique id.</dd>
         </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">119</td>
+              <td>12</td>
+              <td>
+                <span title="PSR2.Methods.MethodDeclaration.Underscore">warning</span>
+              </td>
+              <td>Method name "_build_unique_id" should not be prefixed with an underscore to indicate visibility</td>
+            </tr>
+            <tr>
+              <td class="line">119</td>
+              <td>12</td>
+              <td>
+                <span title="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">error</span>
+              </td>
+              <td>Method name "GB_Hooks::_build_unique_id" is not in camel caps format</td>
+            </tr>
+            <tr>
+              <td class="line">119</td>
+              <td>12</td>
+              <td>
+                <span title="Squiz.Scope.MethodScope.Missing">error</span>
+              </td>
+              <td>Visibility must be declared on method "_build_unique_id"</td>
+            </tr>
+            <tr>
+              <td class="line">123</td>
+              <td>9</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">143</td>
+              <td>21</td>
+              <td>
+                <span title="Generic.ControlStructures.InlineControlStructure.NotAllowed">error</span>
+              </td>
+              <td>Inline control structures are not allowed</td>
+            </tr>
+            <tr>
+              <td class="line">145</td>
+              <td>139</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 139 characters</td>
+            </tr>
+            <tr>
+              <td class="line">154</td>
+              <td>11</td>
+              <td>
+                <span title="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed">warning</span>
+              </td>
+              <td>Usage of ELSE IF is discouraged; use ELSEIF instead</td>
+            </tr>
+            <tr>
+              <td class="line">154</td>
+              <td>11</td>
+              <td>
+                <span title="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword">error</span>
+              </td>
+              <td>Expected 1 space after ELSE keyword; newline found</td>
+            </tr>
+            <tr>
+              <td class="line">154</td>
+              <td>15</td>
+              <td>
+                <span title="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine">error</span>
+              </td>
+              <td>Whitespace found at end of line</td>
+            </tr>
+            <tr>
+              <td class="line">155</td>
+              <td>13</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 8 spaces, found 12</td>
+            </tr>
+            <tr>
+              <td class="line">158</td>
+              <td>13</td>
+              <td>
+                <span title="Generic.WhiteSpace.ScopeIndent.IncorrectExact">error</span>
+              </td>
+              <td>Line indented incorrectly; expected 8 spaces, found 12</td>
+            </tr>
+          </table>
+        </div>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
